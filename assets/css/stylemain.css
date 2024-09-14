@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #f4f4f4;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto; /* Đẩy thanh input sang bên phải */
+    transition: width 0.3s; /* Hiệu ứng chuyển tiếp khi mở rộng thu nhỏ */
+}
+
+.search-input input[type="text"] {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    padding: 0 30px 0 10px; /* Đảm bảo padding đủ để hiển thị icon */
+    transition: width 0.3s;
+}
+
+.search-input input[type="text"]:focus {
+    width: 300px;
+    outline: none;
+}
+
+.search-input i {
+    position: absolute;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-button {
+    background-color: #f4f4f4;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #ddd;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .search-input {
+        display: flex;
+        width: calc(100% - 20px); /* Điều chỉnh để hiển thị đầy đủ trong màn hình nhỏ */
+        margin-left: 0;
+    }
+
+    .search-input input[type="text"] {
+        width: 80%; /* Chiều rộng linh hoạt cho input */
+    }
+
+    .search-input i {
+        right: 10px; /* Đảm bảo icon nằm đúng vị trí */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        width: 100%; /* Chiều rộng full trên màn hình rất nhỏ */
+    }
+
+    .search-input input[type="text"] {
+        width: calc(100% - 40px); /* Điều chỉnh để thanh input hiển thị đúng */
+    }
+}
