@@ -1,0 +1,245 @@
+/* Header styles */
+header {
+    width: 100%;
+    background-color: #333;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.nav-menu.active {
+    display: flex;
+    max-height: 300px; /* Adjust as needed */
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav-menu a:hover {
+    width: 100%;
+    color: rgb(246, 232, 232);
+    background-color: rgb(40, 37, 37);
+    
+}
+
+/* Search input */
+.search-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: calc(100% - 50px);
+    margin-right: 0;
+    transition: width 0.3s;
+}
+
+.search-input input[type="text"] {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    padding: 0 30px 0 10px;
+    transition: width 0.3s;
+}
+
+.search-input i {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    padding: 7px;
+    background-color: rgb(230, 184, 0);
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.search-input i:hover {
+    background-color: rgba(230, 184, 0, 0.7);
+}
+
+/* Login button */
+.login-button {
+    background-color: #f4f4f4;
+    color: #333;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 1px 1px white;
+}
+
+.login-button:hover {
+    background-color: #ddd;
+}
+
+/* General Footer Styles */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f1c40f;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #f1c40f;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #f1c40f;
+}
+
+/* Responsive Design */
+@media only screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        background-color: transparent;
+        top: 0;
+        max-height: none; /* Remove max-height constraint */
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+    }
+
+    .nav-menu li {
+        margin: 0 40px;
+    }
+
+    .search-input {
+        width: auto;
+        margin-right: 200px;
+    }
+}
+
+/* Medium screens (992px and up) */
+@media only screen and (min-width: 992px) {
+    .container-header {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .nav-menu ul {
+        flex-wrap: wrap;
+    }
+}

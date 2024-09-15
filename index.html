@@ -5,47 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thư Viện Học Tập Của Duy</title>
     <link rel="stylesheet" href="assets/css/stylemain.css">
+    <link rel="stylesheet" href="assets/css/header-footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#">Tutorials</a></li>
-                    <li><a href="#">Exercises</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Spaces</a></li>
-                </ul>
-            </nav>
-            <div class="search-input">
-                <input type="text" name="search" id="search" placeholder="Search...">
-                <i class="fa-solid fa-magnifying-glass" style="color: #74C0FC;"></i>
+    <header></header>
+    <article>
+        <section class="content-section">
+            <div class="container-cards">
+                <!-- HTML Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h3>HTML</h3>
+                    <p>Học cách xây dựng các trang web từ cấu trúc cơ bản với HTML.</p>
+                    <a href="#" class="learn-more">Tìm hiểu thêm</a>
+                </div>
+        
+                <!-- CSS Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Phong cách hóa trang web của bạn với CSS, tạo sự bắt mắt và trải nghiệm người dùng tốt.</p>
+                    <a href="#" class="learn-more">Tìm hiểu thêm</a>
+                </div>
+        
+                <!-- JavaScript Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-brands fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Làm trang web của bạn trở nên tương tác và động với JavaScript.</p>
+                    <a href="#" class="learn-more">Tìm hiểu thêm</a>
+                </div>
+        
+                <!-- PHP Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                    <h3>PHP</h3>
+                    <p>Học ngôn ngữ PHP để xây dựng các trang web động và backend mạnh mẽ.</p>
+                    <a href="#" class="learn-more">Tìm hiểu thêm</a>
+                </div>
+        
+                <!-- Python Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Tìm hiểu Python, một ngôn ngữ lập trình mạnh mẽ cho cả backend và AI.</p>
+                    <a href="#" class="learn-more">Tìm hiểu thêm</a>
+                </div>
+        
+                <!-- SQL Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3>SQL</h3>
+                    <p>Quản lý dữ liệu và truy vấn cơ sở dữ liệu hiệu quả với SQL.</p>
+                    <a href="#" class="learn-more">Tìm hiểu thêm</a>
+                </div>
+        
+                <!-- Java Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <p>Khám phá Java, một ngôn ngữ lập trình phổ biến cho các ứng dụng lớn và nhỏ.</p>
+                    <a href="#" class="learn-more">Tìm hiểu thêm</a>
+                </div>
+        
+                <!-- C++ Card -->
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>C++</h3>
+                    <p>Lập trình hiệu năng cao với C++, sử dụng trong các hệ thống nhúng và phần mềm lớn.</p>
+                    <a href="#" class="learn-more">Tìm hiểu thêm</a>
+                </div>
             </div>
-            <button class="login-button">Login</button>
-        </div>
-    </header>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            const searchInput = document.querySelector('.search-input');
-
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-
-            searchInput.querySelector('i').addEventListener('click', function() {
-                searchInput.classList.toggle('active');
-                if (searchInput.classList.contains('active')) {
-                    searchInput.querySelector('input').focus();
-                }
-            });
-        });
-    </script>
+        </section>
+    </article>
+    <footer></footer>
+    <script src="assets/js/load-header-footer.js"></script>
+    <script src="assets/js/menu-toggle.js"></script>
 </body>
 </html>
