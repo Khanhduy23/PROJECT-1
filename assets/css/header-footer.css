@@ -90,7 +90,7 @@ header {
     border: none;
     border-radius: 15px;
     padding: 0 30px 0 10px;
-    transition: width 0.3s;
+    /* transition: width 0.3s; */
 }
 
 .search-input i {
@@ -100,7 +100,7 @@ header {
     padding: 7px;
     background-color: rgb(230, 184, 0);
     border-radius: 15px;
-    transition: background-color 0.3s;
+    /* transition: background-color 0.3s; */
 }
 
 .search-input i:hover {

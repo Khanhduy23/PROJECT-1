@@ -3,24 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML HOME</title>
+    <title>HTML Examples</title>
     <link rel="stylesheet" href="../assets/css/style-paperhtml.css">
     <link rel="stylesheet" href="../assets/css/header-footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for the code examples */
+        .code-container {
+            margin-top: 20px;
+        }
+        .code-container button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        .code-container button:hover {
+            background-color: #0056b3;
+        }
+        .code-example {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            position: relative;
+        }
+        .code-example pre {
+            margin: 0;
+            font-family: monospace;
+        }
+        .code-example.expanded {
+            width: 100%;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .code-example.collapsed {
+            max-height: 100px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <header></header>
     <div class="paper">
         <h1>HTML HOME</h1>
-        <p>
-            Welcome to the HTML HOME section. Here you will find information about the basic structure of HTML, including the use of elements, attributes, and various tags. This page is designed to give you a foundational understanding of HTML. 
-        </p>
-        <p>
-            <a href="html-introduction.html" class="btn-next">Next Page</a>
-        </p>
+        <p>Welcome to the HTML HOME section. Here you will find information about the basic structure of HTML, including the use of elements, attributes, and various tags.</p>
+        <div class="code-container">
+            <h2>Example HTML Code</h2>
+            <div class="code-example collapsed" id="codeExample">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <button id="toggleCode">Expand</button>
+            <button id="editCode">Edit Code</button>
+        </div>
+        <p><a href="html-introduction.html" class="btn-next">Next Page</a></p>
     </div>
     <footer></footer>
     <script src="../assets/js/load-header-footer.js"></script>
     <script src="../assets/js/menu-toggle.js"></script>
+    <script>
+        document.getElementById('toggleCode').addEventListener('click', function() {
+            const codeExample = document.getElementById('codeExample');
+            if (codeExample.classList.contains('collapsed')) {
+                codeExample.classList.remove('collapsed');
+                codeExample.classList.add('expanded');
+                this.textContent = 'Collapse';
+            } else {
+                codeExample.classList.remove('expanded');
+                codeExample.classList.add('collapsed');
+                this.textContent = 'Expand';
+            }
+        });
+
+        document.getElementById('editCode').addEventListener('click', function() {
+            window.location.href = 'code-editor.html';
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .editor-container {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 60px);
+        }
+        .editor-tabs {
+            width: 30%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .tablinks {
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            text-align: left;
+        }
+        .tablinks.active {
+            background-color: #555;
+        }
+        .editor-area {
+            flex: 1;
+            display: none;
+            padding: 10px;
+        }
+        .editor-area.active {
+            display: block;
+        }
+        .output-container {
+            width: 70%;
+            border-left: 1px solid #ddd;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        #output {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        .run-btn, .save-btn {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .save-btn {
+            background-color: #007bff;
+        }
+        .CodeMirror {
+            height: auto;
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    Simple Code Editor
+    <a href="index.html">Quay về</a>
+</div>
+<div class="editor-container">
+    <div class="editor-tabs">
+        <button class="tablinks active" onclick="openEditor('htmlEditor')">HTML</button>
+        <button class="tablinks" onclick="openEditor('cssEditor')">CSS</button>
+        <button class="tablinks" onclick="openEditor('jsEditor')">JavaScript</button>
+        <button class="run-btn" onclick="runCode()">Run</button>
+        <button class="save-btn" onclick="saveCode()">Save</button>
+    </div>
+    <div class="output-container">
+        <div id="htmlEditor" class="editor-area active">
+            <textarea id="htmlCode">
+&lt;!-- Write HTML code here --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+        </div>
+        <div id="cssEditor" class="editor-area">
+            <textarea id="cssCode">/* Write CSS code here */</textarea>
+        </div>
+        <div id="jsEditor" class="editor-area">
+            <textarea id="jsCode">// Write JavaScript code here</textarea>
+        </div>
+        <iframe id="output"></iframe>
+    </div>
+</div>
+<!-- CodeMirror JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+<script>
+    var htmlEditor = CodeMirror.fromTextArea(document.getElementById('htmlCode'), {
+        mode: 'htmlmixed',
+        theme: 'monokai',
+        lineNumbers: true,
+        autoCloseTags: true
+    });
+
+    var cssEditor = CodeMirror.fromTextArea(document.getElementById('cssCode'), {
+        mode: 'css',
+        theme: 'monokai',
+        lineNumbers: true,
+        autoCloseBrackets: true
+    });
+
+    var jsEditor = CodeMirror.fromTextArea(document.getElementById('jsCode'), {
+        mode: 'javascript',
+        theme: 'monokai',
+        lineNumbers: true,
+        autoCloseBrackets: true
+    });
+
+    function openEditor(editorId) {
+        var editors = document.querySelectorAll('.editor-area');
+        editors.forEach(editor => editor.classList.remove('active'));
+        document.getElementById(editorId).classList.add('active');
+
+        var tablinks = document.querySelectorAll('.tablinks');
+        tablinks.forEach(tab => tab.classList.remove('active'));
+        document.querySelector(`button[onclick="openEditor('${editorId}')"]`).classList.add('active');
+
+        if (editorId === 'htmlEditor') {
+            htmlEditor.refresh();
+        } else if (editorId === 'cssEditor') {
+            cssEditor.refresh();
+        } else if (editorId === 'jsEditor') {
+            jsEditor.refresh();
+        }
+    }
+
+    function runCode() {
+        var htmlCode = htmlEditor.getValue();
+        var cssCode = cssEditor.getValue();
+        var jsCode = jsEditor.getValue();
+        var outputFrame = document.getElementById('output');
+        var outputDocument = outputFrame.contentDocument || outputFrame.contentWindow.document;
+        
+        outputDocument.open();
+        outputDocument.write(htmlCode + '<style>' + cssCode + '</style>' + '<script>' + jsCode + '<\/script>');
+        outputDocument.close();
+    }
+
+    function saveCode() {
+        var htmlCode = htmlEditor.getValue();
+        var cssCode = cssEditor.getValue();
+        var jsCode = jsEditor.getValue();
+        var code = htmlCode + '<style>' + cssCode + '</style>' + '<script>' + jsCode + '<\/script>';
+
+        fetch('/save-code', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ code: code })
+        }).then(response => response.text())
+          .then(data => {
+              alert(data); // Hiển thị thông báo thành công hoặc lỗi
+          }).catch(error => {
+              console.error('Lỗi:', error);
+          });
+    }
+
+    // Khởi động với tab HTML mở
+    openEditor('htmlEditor');
+</script>
+</body>
+</html>
