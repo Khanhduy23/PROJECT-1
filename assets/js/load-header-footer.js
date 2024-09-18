@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Load header
-    fetch('../header.html') // Quay lại thư mục gốc trước khi truy cập header.html
+    fetch('header.html') // Tải trực tiếp từ thư mục hiện tại
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     // Load footer
-    fetch('../footer.html') // Quay lại thư mục gốc trước khi truy cập footer.html
+    fetch('footer.html') // Tải trực tiếp từ thư mục hiện tại
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
