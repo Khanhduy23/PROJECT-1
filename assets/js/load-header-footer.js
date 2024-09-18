@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const baseUrl = window.location.pathname.includes('/project-html/') ? '../' : '';
-
+    const baseUrl = window.location.pathname.includes('/project-css/') ? '../' :
+                    window.location.pathname.includes('/project-html/') ? '../' : '';
+                    window.location.pathname.includes('/project-javascript/') ? '../' :
+                    '';  // Default to current directory if none of the above
     // Load header
     fetch(`${baseUrl}header.html`)
         .then(response => response.text())
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.href = baseUrl + link.getAttribute('href');
             });
 
-            // Sau khi header đã được tải, gắn các sự kiện cho menu toggle
+            // Gán sự kiện cho menu toggle
             const menuToggle = document.querySelector('.menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
 

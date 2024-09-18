@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spaces</title>
-    <!-- <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"> -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://cdnjs.cloudflare.com; connect-src 'self'; img-src 'self';"> -->
+    <title>Code Editor</title>
     <!-- CodeMirror CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
@@ -27,48 +25,64 @@
         }
         .editor-container {
             display: flex;
-            flex: 1;
-            height: calc(100vh - 60px);
+            height: calc(100vh - 60px); /* Adjust height to fit the viewport */
         }
         .editor-tabs {
-            width: 30%;
-            background-color: #f4f4f4;
-            padding: 10px;
-            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-        .tablinks {
-            padding: 10px;
-            margin-bottom: 5px;
-            cursor: pointer;
+            width: 100%;
             background-color: #333;
             color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .tablinks {
+            flex: 1;
+            padding: 10px;
+            margin-right: 2px; /* Space between tabs */
+            cursor: pointer;
+            background-color: #444;
+            color: white;
+            text-align: center;
             border: none;
-            text-align: left;
         }
         .tablinks.active {
             background-color: #555;
         }
-        .editor-area {
-            flex: 1;
-            display: none;
-            padding: 10px;
-        }
-        .editor-area.active {
-            display: block;
-        }
-        .output-container {
-            width: 70%;
-            border-left: 1px solid #ddd;
-            background-color: white;
+        .code-editor {
+            width: 50%;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
         }
-        #output {
-            flex: 1;
+        .code-editor .editor-area {
+            display: none;
+            width: 100%;
+            height: calc(100% - 40px); /* Adjust height to fit the tab section */
+        }
+        .code-editor .editor-area.active {
+            display: block;
+        }
+        .code-editor textarea {
+            width: 100%;
+            height: 100%;
             border: none;
+            font-family: monospace;
+            resize: none; /* Disable resizing */
+        }
+        .output-container {
+            width: 50%;
             padding: 10px;
+            box-sizing: border-box;
+            background-color: white;
+            overflow: hidden;
+        }
+        #output {
+            width: 100%;
+            height: 100%;
+            border: none;
             background-color: #f4f4f4;
         }
         .run-btn, .save-btn {
@@ -94,17 +108,17 @@
 <body>
 <div class="header">
     Simple Code Editor
-    <a href="index.html" style="color: white; text-decoration: underline;margin-left: 20px;">Quay về</a>
+    <a href="html-home.html" style="color: white; text-decoration: underline;margin-left: 20px;">Quay về</a>
 </div>
 <div class="editor-container">
-    <div class="editor-tabs">
-        <button class="tablinks active" onclick="openEditor('htmlEditor')">HTML</button>
-        <button class="tablinks" onclick="openEditor('cssEditor')">CSS</button>
-        <button class="tablinks" onclick="openEditor('jsEditor')">JavaScript</button>
-        <button class="run-btn" onclick="runCode()">Run</button>
-        <button class="save-btn" onclick="saveCode()">Save</button>
-    </div>
-    <div class="output-container">
+    <div class="code-editor">
+        <div class="editor-tabs">
+            <button class="tablinks active" onclick="openEditor('htmlEditor')">HTML</button>
+            <button class="tablinks" onclick="openEditor('cssEditor')">CSS</button>
+            <button class="tablinks" onclick="openEditor('jsEditor')">JavaScript</button>
+            <button class="run-btn" onclick="runCode()">Run</button>
+            <button class="save-btn" onclick="saveCode()">Save</button>
+        </div>
         <div id="htmlEditor" class="editor-area active">
             <textarea id="htmlCode">
 &lt;!-- Write HTML code here --&gt;
@@ -127,6 +141,8 @@
         <div id="jsEditor" class="editor-area">
             <textarea id="jsCode">// Write JavaScript code here</textarea>
         </div>
+    </div>
+    <div class="output-container">
         <iframe id="output"></iframe>
     </div>
 </div>
@@ -193,17 +209,17 @@
 
     // Function to save the code
     function saveCode() {
-        localStorage.setItem('htmlCodespaces', htmlEditor.getValue());
-        localStorage.setItem('cssCodespaces', cssEditor.getValue());
-        localStorage.setItem('jsCodespaces', jsEditor.getValue());
+        localStorage.setItem('htmlCode', htmlEditor.getValue());
+        localStorage.setItem('cssCode', cssEditor.getValue());
+        localStorage.setItem('jsCode', jsEditor.getValue());
         alert('Code saved successfully!');
     }
 
     // Load saved code on page load
     function loadCode() {
-        var savedHtmlCode = localStorage.getItem('htmlCodespaces');
-        var savedCssCode = localStorage.getItem('cssCodespaces');
-        var savedJsCode = localStorage.getItem('jsCodespaces');
+        var savedHtmlCode = localStorage.getItem('htmlCode');
+        var savedCssCode = localStorage.getItem('cssCode');
+        var savedJsCode = localStorage.getItem('jsCode');
 
         if (savedHtmlCode) {
             htmlEditor.setValue(savedHtmlCode);
