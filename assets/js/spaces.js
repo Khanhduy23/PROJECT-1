@@ -20,25 +20,6 @@ var jsEditor = CodeMirror.fromTextArea(document.getElementById('jsCode'), {
     autoCloseBrackets: true
 });
 
-// Function to switch between editors
-function openEditor(editorId) {
-    var editors = document.querySelectorAll('.editor-area');
-    editors.forEach(editor => editor.classList.remove('active'));
-    document.getElementById(editorId).classList.add('active');
-
-    var tablinks = document.querySelectorAll('.tablinks');
-    tablinks.forEach(tab => tab.classList.remove('active'));
-    document.querySelector(`button[onclick="openEditor('${editorId}')"]`).classList.add('active');
-
-    if (editorId === 'htmlEditor') {
-        htmlEditor.refresh();
-    } else if (editorId === 'cssEditor') {
-        cssEditor.refresh();
-    } else if (editorId === 'jsEditor') {
-        jsEditor.refresh();
-    }
-}
-
 // Function to run the code
 function runCode() {
     var htmlCode = htmlEditor.getValue();
@@ -51,6 +32,11 @@ function runCode() {
     output.contentDocument.write(htmlCode + cssCode + jsCode);
     output.contentDocument.close();
 }
+
+// Add change event to editors for real-time preview
+htmlEditor.on('change', runCode);
+cssEditor.on('change', runCode);
+jsEditor.on('change', runCode);
 
 // Function to save the code
 function saveCode() {

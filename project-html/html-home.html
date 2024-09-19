@@ -12,7 +12,6 @@
 </head>
 <body>
     <header></header>
-    
     <div class="paper">
         <h1>HTML HOME</h1>
         <p>Welcome to the HTML HOME section. Here you will find information about the basic structure of HTML, including the use of elements, attributes, and various tags.</p>
@@ -61,27 +60,26 @@
         
         <p><a href="html-introduction.html" class="btn-next">Next Page</a></p>
     </div>
-    
     <footer></footer>
-    
     <script src="../assets/js/load-header-footer.js"></script>
-    <script>
+    <!-- <script src="../assets/js/togglecode.js"></script> -->
+     <script>
         function toggleCode(codeId) {
-            const codeExample = document.getElementById(codeId);
-            if (codeExample.classList.contains('collapsed')) {
-                codeExample.classList.remove('collapsed');
-                codeExample.classList.add('expanded');
-                document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Collapse';
-            } else {
-                codeExample.classList.remove('expanded');
-                codeExample.classList.add('collapsed');
-                document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Expand';
-            }
-        }
+    const codeExample = document.getElementById(codeId);
+    if (codeExample.classList.contains('collapsed')) {
+        codeExample.classList.remove('collapsed');
+        codeExample.classList.add('expanded');
+        document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Collapse';
+    } else {
+        codeExample.classList.remove('expanded');
+        codeExample.classList.add('collapsed');
+        document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Expand';
+    }
+}
 
-        function editCode(exampleId) {
-            window.location.href = `example/home.html?exampleId=${exampleId}`;
-        }
-    </script>
+function editCode(exampleId) {
+    window.location.href = `example/homeex.html?exampleId=${exampleId}`;
+}
+     </script>
 </body>
 </html>
