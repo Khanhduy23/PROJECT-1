@@ -15,23 +15,23 @@
     <div class="paper">
         <h1>HTML HOME</h1>
         <p>Welcome to the HTML HOME section. Here you will find information about the basic structure of HTML, including the use of elements, attributes, and various tags.</p>
-        
+            
         <!-- Example 1 -->
         <div class="code-container">
             <h2>Example HTML Code 1</h2>
             <div class="code-example collapsed" id="codeExample1">
-                <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Example 1&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello World from Example 1!&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph for example 1.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                <pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
+&lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;
+&lt;<span class="tag">head</span>&gt;
+    &lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;
+    &lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span>&gt;
+    &lt;<span class="tag">title</span>&gt;<span class="value">Example 1</span>&lt;/<span class="tag">title</span>&gt;
+&lt;/<span class="tag">head</span>&gt;
+&lt;<span class="tag">body</span>&gt;
+    &lt;<span class="tag">h1</span>&gt;<span class="value">Hello World from Example 1!</span>&lt;/<span class="tag">h1</span>&gt;
+    &lt;<span class="tag">p</span>&gt;<span class="value">This is a paragraph for example 1.</span>&lt;/<span class="tag">p</span>&gt;
+&lt;/<span class="tag">body</span>&gt;
+&lt;/<span class="tag">html</span>&gt;</code></pre>
             </div>
             <button class="toggle-code" onclick="toggleCode('codeExample1')">Expand</button>
             <button class="edit-code" onclick="editCode('example1')">Edit Code</button>
@@ -41,45 +41,28 @@
         <div class="code-container">
             <h2>Example HTML Code 2</h2>
             <div class="code-example collapsed" id="codeExample2">
-                <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Example 2&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello World from Example 2!&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph for example 2.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                <pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
+&lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;
+&lt;<span class="tag">head</span>&gt;
+    &lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;
+    &lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span>&gt;
+    &lt;<span class="tag">title</span>&gt;<span class="value">Example 2</span>&lt;/<span class="tag">title</span>&gt;
+&lt;/<span class="tag">head</span>&gt;
+&lt;<span class="tag">body</span>&gt;
+    &lt;<span class="tag">h1</span>&gt;<span class="value">Hello World from Example 2!</span>&lt;/<span class="tag">h1</span>&gt;
+    &lt;<span class="tag">p</span>&gt;<span class="value">This is a paragraph for example 2.</span>&lt;/<span class="tag">p</span>&gt;
+&lt;/<span class="tag">body</span>&gt;
+&lt;/<span class="tag">html</span>&gt;</code></pre>
             </div>
             <button class="toggle-code" onclick="toggleCode('codeExample2')">Expand</button>
             <button class="edit-code" onclick="editCode('example2')">Edit Code</button>
         </div>
         
+        
         <p><a href="html-introduction.html" class="btn-next">Next Page</a></p>
     </div>
     <footer></footer>
     <script src="../assets/js/load-header-footer.js"></script>
-    <!-- <script src="../assets/js/togglecode.js"></script> -->
-     <script>
-        function toggleCode(codeId) {
-    const codeExample = document.getElementById(codeId);
-    if (codeExample.classList.contains('collapsed')) {
-        codeExample.classList.remove('collapsed');
-        codeExample.classList.add('expanded');
-        document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Collapse';
-    } else {
-        codeExample.classList.remove('expanded');
-        codeExample.classList.add('collapsed');
-        document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Expand';
-    }
-}
-
-function editCode(exampleId) {
-    window.location.href = `example/homeex.html?exampleId=${exampleId}`;
-}
-     </script>
+    <script src="../assets/js/togglecode.js"></script>
 </body>
 </html>
