@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const baseUrl = window.location.pathname.includes('/project-css/') ? '../' :
-                    window.location.pathname.includes('/project-html/') ? '../' : '';
-                    window.location.pathname.includes('/project-javascript/') ? '../' :
-                    '';  // Default to current directory if none of the above
-    // Load header
+    let baseUrl = '';
+
+    // Xác định baseUrl dựa trên đường dẫn hiện tại
+    if (window.location.pathname.includes('/project-css/') ||
+        window.location.pathname.includes('/project-html/')) {
+        baseUrl = '../';
+    }
+
+    // Tải header
     fetch(`${baseUrl}header.html`)
         .then(response => response.text())
         .then(data => {
@@ -24,12 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     navMenu.classList.toggle('active');
                 });
             }
-        });
+        })
+        .catch(error => console.error('Error loading header:', error));
 
-    // Load footer
+    // Tải footer
     fetch(`${baseUrl}footer.html`)
         .then(response => response.text())
         .then(data => {
             document.querySelector('footer').innerHTML = data;
-        });
+        })
+        .catch(error => console.error('Error loading footer:', error));
 });
