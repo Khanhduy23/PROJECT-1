@@ -8,12 +8,15 @@
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
+    scroll-behavior: smooth; /* Cải thiện trải nghiệm khi cuộn trang */
 }
+
 /* Section Styles */
 .content-section {
     background-color: #f4f4f4;
     padding: 50px 0;
 }
+
 /* Container for Cards */
 .container-cards {
     display: flex;
@@ -22,7 +25,9 @@ html, body {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px; /* Thêm padding để có khoảng cách tốt trên các thiết bị nhỏ */
 }
+
 /* Individual Card */
 .card {
     background-color: white;
@@ -31,7 +36,8 @@ html, body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 300px;
+    width: 100%; /* Đặt chiều rộng 100% và điều chỉnh với màn hình nhỏ */
+    max-width: 300px;
     overflow: hidden;
 }
 
@@ -77,4 +83,14 @@ html, body {
     background-color: #e65a5a;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container-cards {
+        flex-direction: column; /* Chuyển đổi layout sang chiều dọc khi màn hình nhỏ */
+        align-items: center;
+    }
 
+    .card {
+        width: 90%; /* Đảm bảo card chiếm đủ không gian trên màn hình nhỏ */
+    }
+}
