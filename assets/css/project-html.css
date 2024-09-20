@@ -53,6 +53,7 @@ html, body {
 .card:hover p {
     font-weight: bold;
 }
+
 /* Icon in Card */
 .card-icon {
     font-size: 24px;
@@ -64,4 +65,13 @@ html, body {
 .card p {
     font-size: 14px;
     margin: 0;
+}
+
+/* Section Headers */
+.content-section h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
 }

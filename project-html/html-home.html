@@ -14,52 +14,110 @@
     <header></header>
     <div class="paper">
         <h1>HTML HOME</h1>
-        <p>Quao </p>
+        <p>HTML (HyperText Markup Language) là ngôn ngữ đánh dấu chuẩn được sử dụng để tạo cấu trúc của các trang web. HTML tạo nên nền tảng của mọi trang web, giúp trình duyệt hiểu cách hiển thị nội dung và định dạng văn bản, <img src="#" alt="hình ảnh">, <a href="#">Liên kết</a>, và các thành phần khác vv...&#9834;&#9834;</p>
             
         <!-- Example 1 -->
         <div class="code-container">
             <h2>Example HTML Code 1</h2>
+            <p>Với trình soạn thảo "Tự thử" của chúng tôi, bạn có thể chỉnh sửa mã HTML và xem kết quả:</p>
             <div class="code-example collapsed" id="codeExample1">
-                <pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
+<pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
 &lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;
 &lt;<span class="tag">head</span>&gt;
     &lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;
     &lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span>&gt;
-    &lt;<span class="tag">title</span>&gt;<span class="value">Example 1</span>&lt;/<span class="tag">title</span>&gt;
+    &lt;<span class="tag">title</span>&gt;<span class="value">Document</span>&lt;/<span class="tag">title</span>&gt;
 &lt;/<span class="tag">head</span>&gt;
 &lt;<span class="tag">body</span>&gt;
-    &lt;<span class="tag">h1</span>&gt;<span class="value">Hello World from Example 1!</span>&lt;/<span class="tag">h1</span>&gt;
-    &lt;<span class="tag">p</span>&gt;<span class="value">This is a paragraph for example 1.</span>&lt;/<span class="tag">p</span>&gt;
+    &lt;<span class="tag">h1</span>&gt;<span class="value">This is a Heading</span>&lt;/<span class="tag">h1</span>&gt;
+    &lt;<span class="tag">p</span>&gt;<span class="value">This is a paragraph.</span>&lt;/<span class="tag">p</span>&gt;
 &lt;/<span class="tag">body</span>&gt;
 &lt;/<span class="tag">html</span>&gt;</code></pre>
             </div>
             <button class="toggle-code" onclick="toggleCode('codeExample1')">Expand</button>
             <button class="edit-code" onclick="editCode('example1')">Edit Code</button>
         </div>
-        
         <!-- Example 2 -->
         <div class="code-container">
             <h2>Example HTML Code 2</h2>
+            <p>Đây là một bố cục cơ bản của một trang web bao gồm header, nav, aside, article, footer.</p>
             <div class="code-example collapsed" id="codeExample2">
-                <pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
-&lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;
-&lt;<span class="tag">head</span>&gt;
-    &lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;
-    &lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span>&gt;
-    &lt;<span class="tag">title</span>&gt;<span class="value">Example 2</span>&lt;/<span class="tag">title</span>&gt;
-&lt;/<span class="tag">head</span>&gt;
-&lt;<span class="tag">body</span>&gt;
-    &lt;<span class="tag">h1</span>&gt;<span class="value">Hello World from Example 2!</span>&lt;/<span class="tag">h1</span>&gt;
-    &lt;<span class="tag">p</span>&gt;<span class="value">This is a paragraph for example 2.</span>&lt;/<span class="tag">p</span>&gt;
-&lt;/<span class="tag">body</span>&gt;
-&lt;/<span class="tag">html</span>&gt;</code></pre>
+<pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
+    &lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;
+    &lt;<span class="tag">head</span>&gt;
+        &lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;
+        &lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span>&gt;
+        &lt;<span class="tag">title</span>&gt;<span class="value">Layout Example</span>&lt;/<span class="tag">title</span>&gt;
+        &lt;<span class="tag">style</span>&gt;
+            <span class="keyword">header</span> {
+                <span class="attribute">background-color</span>: <span class="value">#4CAF50</span>;
+                <span class="attribute">color</span>: <span class="value">white</span>;
+                <span class="attribute">padding</span>: <span class="value">20px</span>;
+                <span class="attribute">text-align</span>: <span class="value">center</span>;
+            }
+            <span class="keyword">nav</span> {
+                <span class="attribute">background-color</span>: <span class="value">#333</span>;
+                <span class="attribute">overflow</span>: <span class="value">hidden</span>;
+            }
+            <span class="keyword">section</span>, <span class="keyword">article</span>, <span class="keyword">aside</span>, <span class="keyword">footer</span> {
+                <span class="attribute">padding</span>: <span class="value">20px</span>;
+                <span class="attribute">margin</span>: <span class="value">10px</span> <span class="value">0</span>;
+            }
+            <span class="keyword">section</span> {
+                <span class="attribute">background-color</span>: <span class="value">#f4f4f4</span>;
+            }
+            <span class="keyword">article</span> {
+                <span class="attribute">background-color</span>: <span class="value">#ddd</span>;
+            }
+            <span class="keyword">aside</span> {
+                <span class="attribute">background-color</span>: <span class="value">#ccc</span>;
+            }
+            <span class="keyword">footer</span> {
+                <span class="attribute">background-color</span>: <span class="value">#444</span>;
+                <span class="attribute">color</span>: <span class="value">white</span>;
+            }
+        &lt;/<span class="tag">style</span>&gt;
+    &lt;/<span class="tag">head</span>&gt;
+    &lt;<span class="tag">body</span>&gt;
+        &lt;<span class="tag">header</span>&gt;
+            &lt;<span class="tag">h1</span>&gt;<span class="value">Header Section</span>&lt;/<span class="tag">h1</span>&gt;
+        &lt;/<span class="tag">header</span>&gt;
+    
+        &lt;<span class="tag">nav</span>&gt;
+            &lt;<span class="tag">ul</span>&gt;
+                &lt;<span class="tag">li</span>&gt;<span class="value">Home</span>&lt;/<span class="tag">li</span>&gt;
+                &lt;<span class="tag">li</span>&gt;<span class="value">About</span>&lt;/<span class="tag">li</span>&gt;
+                &lt;<span class="tag">li</span>&gt;<span class="value">Services</span>&lt;/<span class="tag">li</span>&gt;
+                &lt;<span class="tag">li</span>&gt;<span class="value">Contact</span>&lt;/<span class="tag">li</span>&gt;
+            &lt;/<span class="tag">ul</span>&gt;
+        &lt;/<span class="tag">nav</span>&gt;
+    
+        &lt;<span class="tag">section</span>&gt;
+            &lt;<span class="tag">article</span>&gt;
+                &lt;<span class="tag">h2</span>&gt;<span class="value">Article Section</span>&lt;/<span class="tag">h2</span>&gt;
+                &lt;<span class="tag">p</span>&gt;<span class="value">This is an article inside the section.</span>&lt;/<span class="tag">p</span>&gt;
+            &lt;/<span class="tag">article</span>&gt;
+            &lt;<span class="tag">aside</span>&gt;
+                &lt;<span class="tag">h2</span>&gt;<span class="value">Aside Section</span>&lt;/<span class="tag">h2</span>&gt;
+                &lt;<span class="tag">p</span>&gt;<span class="value">This is an aside inside the section.</span>&lt;/<span class="tag">p</span>&gt;
+            &lt;/<span class="tag">aside</span>&gt;
+        &lt;/<span class="tag">section</span>&gt;
+    
+        &lt;<span class="tag">footer</span>&gt;
+            &lt;<span class="tag">p</span>&gt;<span class="value">Footer Section</span>&lt;/<span class="tag">p</span>&gt;
+        &lt;/<span class="tag">footer</span>&gt;
+    &lt;/<span class="tag">body</span>&gt;
+    &lt;/<span class="tag">html</span>&gt;</code></pre>
+                    
             </div>
             <button class="toggle-code" onclick="toggleCode('codeExample2')">Expand</button>
             <button class="edit-code" onclick="editCode('example2')">Edit Code</button>
         </div>
-        
-        
-        <p><a href="html-introduction.html" class="btn-next">Next Page</a></p>
+        <p>Còn rất nhiều thứ bạn sẽ cần học sắp tới , hãy kiên trì và cố gắng nhiều hơn.</p>
+        <div class="navigation">
+            <a href="html-home.html" class="btn-previous">Previous</a>
+            <a href="html-introduction.html" class="btn-next">Next Page</a>
+        </div>
     </div>
     <footer></footer>
     <script src="../assets/js/load-header-footer.js"></script>
