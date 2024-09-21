@@ -18,6 +18,7 @@
                 <h1>Introduction</h1>
                 <p>Trong hành trình xây dựng một trang web, không chỉ đơn thuần là việc "code, code, code". Để thực sự nắm bắt được cách hoạt động của một trang web chuẩn, bạn cần hiểu rõ nhiều kiến thức quan trọng. Từ Internet, HTTP, DNS đến những khái niệm cơ bản khác, mỗi phần đều góp phần tạo nên một bức tranh toàn diện về thế giới web.</p>
                 <p>Đừng nản lòng trước lượng lý thuyết có thể có! Việc hiểu rõ từng khía cạnh sẽ giúp bạn không chỉ học hiệu quả hơn mà còn áp dụng kiến thức vào thực tiễn một cách dễ dàng. Hãy cùng nhau khám phá những kiến thức cần thiết này nhé!</p>
+                <p>À đây là trang giới hiệu đầu nha sẽ còn một trang lý thuyết tiếp theo nữa.😜</p>
             </section>            
                     <!-- Bảng chỉ mục -->
                     <h2>Mục lục</h2>
@@ -28,6 +29,11 @@
                         <li><a href="#ipaddress">💻 IP Address</a></li>
                         <li><a href="#dns">🛠️ DNS (Domain Name System)</a></li>
                         <li><a href="#webserver">🌍 Web Server</a></li>
+                        <li><a href="#ssl-tls">🛡️ SSL-TLS</a>
+                            <li><a href="#symmetric-cryptography">🔒 Mã hóa đối xứng</a></li>
+                            <li><a href="#asymmetric-cryptography">🔑 Mã hóa bất đối xứng</a></li>
+                            <li><a href="#ssl-certificate">🛡️ Chứng chỉ SSL</a></li>                            
+                        </li>
                         <li><a href="#hosting">📦 Hosting</a></li>
                         <li><a href="#tcpip">🔗 TCP/IP</a></li>
                         <li><a href="#http">🔒 HTTP/HTTPS</a></li>
@@ -51,6 +57,9 @@
                     trí tuệ nhân tạo, blockchain, và Internet of Things (IoT), kỹ năng lập trình ngày càng trở nên thiết yếu đối với 
                     bất kỳ ai muốn thành công trong thế giới hiện đại.
                 </p>
+                <div class="image-container">
+                    <img class="image" src="../assets/images/trien-vong-cua-nghe-lap-trinh.jpg" alt="Triển vọng nghành lập trình">
+                </div>
             </section>
             <section id="importance">
                 <h2>Tầm quan trọng của công nghệ và lập trình trong thời đại hiện nay</h2>
@@ -83,7 +92,9 @@
             <section id="internet">
                 <h2>Internet là gì và cách nó hoạt động?</h2>
                 <p><strong>Internet</strong> là một mạng lưới toàn cầu kết nối các máy tính, thiết bị di động và hệ thống khác nhau, giúp các thiết bị này có thể giao tiếp và trao đổi dữ liệu với nhau. Nó hoạt động như một hệ thống liên kết các mạng máy tính trên toàn thế giới thông qua các giao thức chuẩn như <strong>TCP/IP</strong>.</p>
-                
+                <div class="image-container">
+                    <img class="image" src="../assets/images/internet-la-gi.webp" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4><strong>1. Cách Internet hoạt động</strong></h4>
                 <ul>
                     <li><strong>Các thành phần cơ bản:</strong>
@@ -98,6 +109,9 @@
                     <li><strong>DNS (Domain Name System):</strong> Hệ thống chuyển đổi địa chỉ IP thành tên miền dễ nhớ (ví dụ, <code>google.com</code> thay vì <code>172.217.12.206</code>). Khi bạn nhập một địa chỉ trang web, DNS giúp tìm đúng máy chủ của trang web đó.</li>
                     <li><strong>Router và Switches:</strong> Các thiết bị này giúp truyền tải dữ liệu giữa các mạng và thiết bị khác nhau, chọn đường đi tốt nhất để gửi dữ liệu từ nguồn đến đích.</li>
                 </ul>
+                <div class="image-container">
+                    <img class="image" src="../assets/images/nguyen-ly-hoat-dong-cua-router.webp" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4><strong>2. Các giai đoạn hoạt động cơ bản của Internet</strong></h4>
                 <ul>
                     <li><strong>Truy vấn DNS:</strong> Khi bạn nhập một URL (ví dụ, <code>example.com</code>), trình duyệt sẽ gửi một yêu cầu đến DNS để tìm địa chỉ IP của trang web đó.</li>
@@ -105,6 +119,9 @@
                     <li><strong>Truyền tải dữ liệu:</strong> Dữ liệu được truyền tải qua các router, switches và các tuyến mạng khác nhau trên toàn thế giới. Các gói dữ liệu có thể đi qua nhiều quốc gia trước khi đến đích.</li>
                     <li><strong>Hiển thị kết quả:</strong> Trình duyệt của bạn nhận các gói dữ liệu, tái tạo lại thành trang web hoàn chỉnh và hiển thị nội dung cho bạn.</li>
                 </ul>
+                <div class="image-container">
+                    <img class="image" src="../assets/images/internet-hoat-dong-như-the-nao.webp" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4><strong>3. Tác động của Internet đến thực tế</strong></h4>
                 <ul>
                     <li><strong>Kết nối toàn cầu:</strong> Internet kết nối con người từ mọi nơi trên thế giới, giúp giao tiếp, chia sẻ thông tin nhanh chóng qua email, video call, mạng xã hội, v.v.</li>
@@ -122,20 +139,27 @@
             
                 <h4><strong>5. Giao thức khác trong Internet</strong></h4>
                 <p>Ngoài TCP/IP, còn có giao thức UDP (User Datagram Protocol), thường được sử dụng cho các ứng dụng yêu cầu tốc độ cao mà không cần kiểm soát lỗi, như video streaming và trò chơi trực tuyến.</p>
-            
+                <div class="image-container">
+                    <img class="image" src="../assets/images/giao-thuc-udp-la-gi-1.png" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4>Kết luận</h4>
                 <p>Internet không chỉ là một công cụ kết nối các thiết bị với nhau, mà còn là nền tảng tạo ra những thay đổi lớn trong mọi lĩnh vực cuộc sống. Hiểu cách nó hoạt động sẽ giúp bạn tận dụng tối đa các lợi ích mà Internet mang lại, đồng thời giúp bạn chú ý hơn đến các vấn đề bảo mật và an toàn khi trực tuyến.</p>
             </section>                    
             <section id="ipaddress">
                 <h2>Địa chỉ IP là gì?</h2>
                 <p><strong>Địa chỉ IP</strong> (Internet Protocol Address) là một chuỗi số duy nhất được gán cho mỗi thiết bị kết nối vào mạng Internet. Địa chỉ này cho phép các thiết bị nhận diện và giao tiếp với nhau trong một mạng lưới, tương tự như địa chỉ nhà giúp bạn gửi thư cho ai đó.</p>
-                
+                <div class="image-container">
+                    <img class="image" src="../assets/images/ip-la-gi.jpg" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4><strong>1. Phân loại địa chỉ IP</strong></h4>
                 <ul>
                     <li><strong>IPv4:</strong> Đây là phiên bản đầu tiên của giao thức IP, sử dụng chuỗi 32 bit để tạo ra khoảng 4,3 tỷ địa chỉ duy nhất (ví dụ: 192.168.1.1). Do sự phát triển nhanh chóng của Internet, số lượng địa chỉ IPv4 đã gần như cạn kiệt.</li>
                     <li><strong>IPv6:</strong> Để khắc phục tình trạng này, IPv6 được giới thiệu, sử dụng chuỗi 128 bit, cho phép tạo ra một số lượng địa chỉ khổng lồ (tương đương với 340 triệu triệu triệu triệu địa chỉ). Địa chỉ IPv6 thường được biểu diễn dưới dạng 8 nhóm số hex phân cách bằng dấu hai chấm (ví dụ: 2001:0db8:85a3:0000:0000:8a2e:0370:7334).</li>
+                    <li><strong>Bit:</strong> Bit – viết tắt của từ binary digit,  là đơn vị nhỏ nhất dùng để biểu thị những thông tin trong máy tính và là đơn vị cơ bản dùng để đo lượng thông tin trong hệ thống, tính dung lượng của bộ nhớ như: ổ cứng, thẻ nhớ, USB, RAM..Mỗi bit là một chữ số nhị phân 0 hoặc 1, đồng thời thể hiện một trong hai trạng thái tắt hoặc mở tương ứng của cổng luận lí nằm trong mạch điện tử.</li>
                 </ul>
-            
+                <div class="image-container">
+                    <img class="image" src="../assets/images/bit-la-gi.jpg" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4><strong>2. Cách thức hoạt động của địa chỉ IP</strong></h4>
                 <ul>
                     <li><strong>Giao tiếp giữa các thiết bị:</strong> Khi một thiết bị muốn gửi dữ liệu đến một thiết bị khác, nó sẽ sử dụng địa chỉ IP của thiết bị đích để đảm bảo rằng dữ liệu được gửi đến đúng nơi.</li>
@@ -162,7 +186,9 @@
             <section id="dns">
                 <h2>DNS là gì?</h2>
                 <p><strong>DNS (Domain Name System)</strong> là một hệ thống phân giải tên miền, giúp chuyển đổi các tên miền dễ nhớ (như <code>example.com</code>) thành địa chỉ IP mà máy tính có thể hiểu (như <code>192.0.2.1</code>). Nó giống như một danh bạ điện thoại cho Internet, cho phép người dùng truy cập các trang web mà không cần phải nhớ địa chỉ IP.</p>
-            
+                <div class="image-container">
+                    <img class="image" src="../assets/images/dns.png" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4><strong>1. Cách thức hoạt động của DNS</strong></h4>
                 <ul>
                     <li><strong>Truy vấn DNS:</strong> Khi bạn nhập một URL vào trình duyệt, trình duyệt sẽ gửi yêu cầu đến máy chủ DNS để tìm địa chỉ IP tương ứng với tên miền đó.</li>
@@ -184,15 +210,7 @@
                     <li><strong>Phân tải lưu lượng:</strong> DNS cũng giúp phân phối lưu lượng đến nhiều máy chủ khác nhau, tối ưu hóa hiệu suất và giảm tải cho một máy chủ duy nhất. Kỹ thuật này được gọi là DNS Load Balancing.</li>
                     <li><strong>Bảo mật:</strong> Một số giải pháp DNS như DNSSEC (DNS Security Extensions) giúp bảo vệ người dùng khỏi các cuộc tấn công như giả mạo DNS, đảm bảo tính toàn vẹn và xác thực của các phản hồi DNS.</li>
                 </ul>
-            
-                <h4><strong>4. Phân loại địa chỉ IP</strong></h4>
-                <p>Địa chỉ IP được chia thành hai loại chính:</p>
-                <ul>
-                    <li><strong>IPv4:</strong> Là phiên bản đầu tiên của địa chỉ IP, sử dụng 32 bit để tạo ra khoảng 4,3 tỷ địa chỉ duy nhất. Địa chỉ IPv4 thường được biểu diễn dưới dạng bốn số nguyên (từ 0 đến 255) được phân cách bởi dấu chấm, ví dụ: <code>192.168.1.1</code>. Do số lượng địa chỉ hạn chế, IPv4 dần trở nên không đủ cho nhu cầu kết nối hiện tại.</li>
-                    <li><strong>IPv6:</strong> Để giải quyết vấn đề cạn kiệt địa chỉ IP, IPv6 được phát triển với kích thước 128 bit, cho phép tạo ra một số lượng lớn địa chỉ (hơn 340 triệu triệu triệu triệu địa chỉ). Địa chỉ IPv6 thường được biểu diễn dưới dạng tám nhóm số thập lục phân (hexadecimal) được phân cách bằng dấu hai chấm, ví dụ: <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>.</li>
-                </ul>
-            
-                <h4><strong>5. Các vấn đề thường gặp với DNS</strong></h4>
+                <h4><strong>4. Các vấn đề thường gặp với DNS</strong></h4>
                 <ul>
                     <li><strong>Cache DNS:</strong> Đôi khi, các thông tin DNS được lưu trữ trong cache có thể trở nên lỗi thời, dẫn đến việc không thể truy cập được trang web. Điều này có thể được khắc phục bằng cách xóa cache hoặc chờ đợi một thời gian để thông tin mới được cập nhật.</li>
                     <li><strong>Cuộc tấn công DDoS:</strong> Các máy chủ DNS có thể là mục tiêu của các cuộc tấn công phân tán từ chối dịch vụ, làm gián đoạn khả năng truy cập vào các trang web. Các biện pháp bảo vệ như phân tán tài nguyên và sử dụng các máy chủ DNS dự phòng có thể giúp giảm thiểu rủi ro này.</li>
@@ -205,7 +223,9 @@
             <section id="webserver">
                 <h2>Web Server là gì?</h2>
                 <p><strong>Web Server</strong> là một phần mềm hoặc phần cứng có chức năng lưu trữ và phục vụ nội dung web cho người dùng thông qua Internet. Khi người dùng gửi yêu cầu truy cập một trang web, web server sẽ xử lý yêu cầu đó và trả về dữ liệu (như HTML, CSS, JavaScript, hình ảnh) cho trình duyệt của người dùng.</p>
-            
+                <div class="image-container">
+                    <img class="image" src="../assets/images/webserver-la-gi.jpg" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4><strong>1. Chức năng của Web Server</strong></h4>
                 <ul>
                     <li><strong>Tiếp nhận yêu cầu:</strong> Web server nhận và xử lý các yêu cầu từ trình duyệt, xác định yêu cầu nào đang được thực hiện và từ đó gửi phản hồi tương ứng. Điều này bao gồm việc phân tích các phương thức HTTP như GET, POST.</li>
@@ -236,7 +256,9 @@
             <section id="hosting">
                 <h2>Hosting là gì?</h2>
                 <p><strong>Hosting</strong> là dịch vụ cung cấp không gian lưu trữ trên máy chủ (server) cho các trang web và ứng dụng trực tuyến. Khi bạn đăng ký một dịch vụ hosting, bạn sẽ có quyền truy cập vào một máy chủ để lưu trữ các file, dữ liệu và nội dung của trang web của mình, cho phép người dùng truy cập từ bất kỳ đâu qua Internet. Dịch vụ hosting là một phần thiết yếu giúp trang web của bạn hoạt động liên tục và hiệu quả.</p>
-            
+                <div class="image-container">
+                    <img class="image" src="../assets/images/dich-vu-luu-tru-web-webhosting.jpg" alt="Triển vọng nghành lập trình">
+                </div>
                 <h4><strong>1. Các loại dịch vụ Hosting</strong></h4>
                 <ul>
                     <li><strong>Shared Hosting:</strong> Nhiều trang web cùng chia sẻ tài nguyên của một máy chủ. Đây là lựa chọn tiết kiệm cho các trang web nhỏ, nhưng hiệu suất có thể bị ảnh hưởng nếu một trang web khác sử dụng quá nhiều tài nguyên.</li>
@@ -284,7 +306,6 @@
             <section id="http">
                 <h2>Giao thức HTTP/HTTPS là gì?</h2>
                 <p><strong>HTTP</strong> (Hypertext Transfer Protocol) là giao thức truyền tải thông tin giữa trình duyệt và máy chủ web. <strong>HTTPS</strong> (HTTP Secure) là phiên bản an toàn của HTTP, sử dụng mã hóa SSL/TLS để bảo vệ dữ liệu trong quá trình truyền tải.</p>
-            
                 <h4><strong>1. Sự khác biệt giữa HTTP và HTTPS</strong></h4>
                 <ul>
                     <li><strong>Giao thức truyền tải:</strong> HTTP không mã hóa dữ liệu, trong khi HTTPS mã hóa thông tin, bảo vệ dữ liệu khỏi việc bị nghe lén.</li>
@@ -296,8 +317,99 @@
                 <h4>Kết luận</h4>
                 <p>HTTPS là yếu tố quan trọng trong bảo mật trực tuyến, giúp bảo vệ thông tin cá nhân và nâng cao độ tin cậy của trang web. Sử dụng HTTPS không chỉ bảo vệ người dùng mà còn cải thiện SEO cho trang web.</p>
             </section>
-            
-            
+            <section id="ssl-tls">
+                <h2>SSL/TLS là gì?</h2>
+                <p><strong>SSL</strong> (Secure Sockets Layer) và <strong>TLS</strong> (Transport Layer Security) là các giao thức mã hóa được sử dụng để bảo vệ dữ liệu trong quá trình truyền tải giữa trình duyệt và máy chủ web. TLS là phiên bản nâng cấp của SSL.</p>
+                <div class="image-container">
+                    <img class="image" src="../assets/images/ssl-tls.webp" alt="Triển vọng nghành lập trình">
+                </div>
+                <h4><strong>1. Sự khác biệt giữa SSL và TLS</strong></h4>
+                <ul>
+                    <li><strong>Cấp độ bảo mật:</strong> TLS cung cấp mức bảo mật cao hơn so với SSL nhờ vào các thuật toán mã hóa và xác thực mạnh mẽ hơn.</li>
+                    <li><strong>Phiên bản:</strong> SSL đã bị ngừng sử dụng do lỗ hổng bảo mật, trong khi TLS vẫn tiếp tục được sử dụng và nâng cấp với các phiên bản mới như TLS 1.2 và TLS 1.3.</li>
+                    <li><strong>Hiệu suất:</strong> TLS có hiệu suất tốt hơn do cải thiện quá trình bắt tay (handshake) và giảm độ trễ trong quá trình mã hóa dữ liệu.</li>
+                </ul>
+                <ul>
+                    <li><strong>Cấp độ bảo mật:</strong> TLS cung cấp mức bảo mật cao hơn so với SSL nhờ vào các thuật toán mã hóa và xác thực mạnh mẽ hơn.</li>
+                    <li><strong>Phiên bản:</strong> SSL đã bị ngừng sử dụng do lỗ hổng bảo mật, trong khi TLS vẫn tiếp tục được sử dụng và nâng cấp với các phiên bản mới như TLS 1.2 và TLS 1.3.</li>
+                    <li><strong>Hiệu suất:</strong> TLS có hiệu suất tốt hơn do cải thiện quá trình bắt tay (handshake) và giảm độ trễ trong quá trình mã hóa dữ liệu.</li>
+                </ul>
+                <section id="symmetric-cryptography">
+                    <h2>Mã hóa đối xứng (Symmetric Cryptography)</h2>
+                    <p><strong>Mã hóa đối xứng</strong> là phương pháp mã hóa sử dụng một khóa duy nhất cho cả quá trình mã hóa và giải mã dữ liệu. Điều này yêu cầu khóa bí mật phải được chia sẻ an toàn giữa các bên.</p>
+                    <div class="image-container">
+                        <img class="image" src="../assets/images/ma-hoa-doi-xung.webp" alt="Mã hóa đối xứng">
+                    </div>
+                    <h4><strong>1. Cách hoạt động</strong></h4>
+                    <ul>
+                        <li>Người gửi và người nhận sử dụng cùng một khóa bí mật để mã hóa và giải mã dữ liệu.</li>
+                        <li>Khóa phải được giữ bí mật, nếu không dữ liệu có thể bị xâm phạm.</li>
+                    </ul>
+                    <h4><strong>2. Ưu điểm</strong></h4>
+                    <ul>
+                        <li>Hiệu suất cao: Quá trình mã hóa và giải mã nhanh chóng.</li>
+                        <li>Ít tài nguyên: Không đòi hỏi nhiều tài nguyên hệ thống.</li>
+                    </ul>
+                    <h4><strong>3. Nhược điểm</strong></h4>
+                    <ul>
+                        <li>Khó khăn trong việc chia sẻ khóa một cách an toàn.</li>
+                        <li>Không phù hợp cho nhiều người tham gia giao tiếp vì cần nhiều khóa riêng lẻ.</li>
+                    </ul>
+                    <h4>Kết luận</h4>
+                    <p>Mã hóa đối xứng phù hợp cho các ứng dụng cần tốc độ nhanh và xử lý dữ liệu khối lượng lớn, nhưng quản lý khóa là một thách thức lớn.</p>
+                </section>
+                
+                <section id="asymmetric-cryptography">
+                    <h2>Mã hóa bất đối xứng (Asymmetric Cryptography)</h2>
+                    <p><strong>Mã hóa bất đối xứng</strong> sử dụng hai khóa: một khóa công khai để mã hóa và một khóa bí mật để giải mã. Điều này giúp giải quyết vấn đề chia sẻ khóa bí mật.</p>
+                    <div class="image-container">
+                        <img class="image" src="../assets/images/ma-doi-xung 2.webp" alt="Mã hóa bất đối xứng">
+                    </div>
+                    <h4><strong>1. Cách hoạt động</strong></h4>
+                    <ul>
+                        <li>Người gửi mã hóa dữ liệu bằng khóa công khai của người nhận.</li>
+                        <li>Người nhận sử dụng khóa bí mật để giải mã dữ liệu. Khóa bí mật không bao giờ được chia sẻ công khai.</li>
+                    </ul>
+                    <h4><strong>2. Ưu điểm</strong></h4>
+                    <ul>
+                        <li>Bảo mật cao: Không cần chia sẻ khóa bí mật công khai.</li>
+                        <li>Có thể xác minh danh tính thông qua chữ ký số.</li>
+                    </ul>
+                    <h4><strong>3. Nhược điểm</strong></h4>
+                    <ul>
+                        <li>Chậm hơn so với mã hóa đối xứng.</li>
+                        <li>Cần nhiều tài nguyên hơn, đặc biệt với dữ liệu lớn.</li>
+                    </ul>
+                    <h4>Kết luận</h4>
+                    <p>Mã hóa bất đối xứng mang lại mức độ bảo mật cao hơn và được sử dụng rộng rãi trong các hệ thống giao tiếp bảo mật hiện đại như SSL/TLS.</p>
+                </section>
+                
+                <section id="ssl-certificate">
+                    <h2>Chứng chỉ SSL là gì?</h2>
+                    <p><strong>Chứng chỉ SSL</strong> (Secure Sockets Layer) là một chứng thực số đảm bảo rằng dữ liệu được truyền tải giữa trình duyệt và máy chủ web là an toàn và không bị xâm phạm. SSL đã được thay thế bởi giao thức <strong>TLS</strong> (Transport Layer Security).</p>
+                    <h4><strong>1. Cách hoạt động của SSL</strong></h4>
+                    <ul>
+                        <li>Khi người dùng truy cập một trang web bảo mật, trình duyệt sẽ yêu cầu máy chủ cung cấp chứng chỉ SSL.</li>
+                        <li>Máy chủ gửi chứng chỉ SSL chứa khóa công khai và thông tin xác thực.</li>
+                        <li>Trình duyệt xác minh chứng chỉ SSL, sau đó mã hóa kết nối giữa người dùng và máy chủ.</li>
+                    </ul>
+                    <h4><strong>2. Ưu điểm</strong></h4>
+                    <ul>
+                        <li>Bảo vệ dữ liệu: SSL/TLS mã hóa toàn bộ dữ liệu truyền tải.</li>
+                        <li>Xác thực danh tính: Đảm bảo trang web thật và không bị giả mạo.</li>
+                    </ul>
+                    <h4><strong>3. Nhược điểm</strong></h4>
+                    <ul>
+                        <li>Chi phí: Cài đặt và duy trì chứng chỉ SSL có thể tốn kém.</li>
+                        <li>Hiệu suất: Quá trình mã hóa có thể làm chậm tốc độ tải trang.</li>
+                    </ul>
+                    <h4>Kết luận</h4>
+                    <p>Chứng chỉ SSL là một yếu tố quan trọng trong bảo mật trực tuyến, giúp bảo vệ thông tin người dùng trong quá trình giao tiếp với các trang web.</p>
+                </section>
+                                
+                <h4>Kết luận</h4>
+                <p>SSL/TLS đóng vai trò quan trọng trong bảo mật thông tin trực tuyến, đảm bảo dữ liệu được truyền tải an toàn và đáng tin cậy. TLS hiện là giao thức chuẩn, thay thế cho SSL trong mọi ứng dụng web hiện đại.</p>
+            </section>            
             <section id="firewall">
                 <h2>Firewall là gì?</h2>
                 <p><strong>Firewall</strong> là một hệ thống bảo mật mạng, kiểm soát và giám sát lưu lượng dữ liệu giữa mạng nội bộ và bên ngoài, nhằm ngăn chặn truy cập trái phép và các mối đe dọa bảo mật.</p>
@@ -346,7 +458,12 @@
                 <p>Những ứng dụng thực tiễn này cho thấy cách mà các khái niệm này kết hợp để cung cấp trải nghiệm người dùng mượt mà và nhanh chóng.</p>
             </section>            
         </main>
-        <footer></footer>
+        <div class="navigation">
+            <a href="html-introduction.html" class="btn-previous">Previous</a>
+            <a href="html-introduction2.html" class="btn-next">Next Page</a>
+        </div>
     </div>
+    <footer></footer>
+    <script src="../assets/js/load-header-footer.js"></script>
 </body>
 </html>
