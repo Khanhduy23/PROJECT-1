@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basic</title>
+    <link rel="stylesheet" href="../assets/css/style-paperhtml.css">
+    <link rel="stylesheet" href="../assets/css/header-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/html-home.css">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header></header>
+    <div class="paper">
+        <div class="code-container">
+            <h1>HTML Basic</h1>
+            <p>Đoạn mã dưới đây là bố cục cơ bản của một tài liệu HTML, bao gồm các phần quan trọng giúp trình duyệt hiểu và hiển thị nội dung chính xác.</p>
+            <div class="code-example collapsed" id="codeExampleBasic">
+                <pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
+        &lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;
+        &lt;<span class="tag">head</span>&gt;
+            &lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;
+            &lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span>&gt;
+            &lt;<span class="tag">title</span>&gt;<span class="value">Document</span>&lt;/<span class="tag">title</span>&gt;
+        &lt;/<span class="tag">head</span>&gt;
+        &lt;<span class="tag">body</span>&gt;
+        &lt;/<span class="tag">body</span>&gt;
+        &lt;/<span class="tag">html</span>&gt;</code></pre>
+            </div>
+            <button class="toggle-code" onclick="toggleCode('codeExampleBasic')">Expand</button>
+            <button class="edit-code" onclick="editCode('basicExample')">Code</button>
+        </div>
+        
+        <section>
+            <h2>Phân Tích Đoạn Code</h2>
+            <p class="keyword">&lt;<span class="keyword">!DOCTYPE</span> <span class="keyword">html</span>&gt;: <span class="black-text">Đây là khai báo cho trình duyệt biết rằng tài liệu đang sử dụng HTML5, giúp xác định loại tài liệu và đảm bảo rằng trình duyệt hiển thị trang web chính xác.</span></p>
+            <p class="tag">&lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;: <span class="black-text">Thẻ này mở đầu cho tài liệu HTML, với thuộc tính <code class="attribute">lang</code> chỉ định ngôn ngữ của tài liệu (tiếng Anh trong trường hợp này).</span></p>
+            <p class="tag">&lt;<span class="tag">head</span>&gt;: <span class="black-text">Phần đầu của tài liệu, nơi chứa các thông tin meta, tiêu đề và các liên kết tới CSS hoặc JavaScript.</span></p>
+            <p class="tag">&lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;: <span class="black-text">Thiết lập bộ ký tự cho tài liệu là UTF-8, cho phép hiển thị các ký tự quốc tế và đặc biệt.</span></p>
+            <p class="tag">&lt;<span class="tag">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span>&gt;: <span class="black-text">Thẻ này giúp điều chỉnh kích thước và tỷ lệ hiển thị của trang trên các thiết bị khác nhau, đặc biệt là trên di động.</span></p>
+            <p class="tag">&lt;<span class="tag">title</span>&gt;<span class="value">Document</span>&lt;/<span class="tag">title</span>&gt;: <span class="black-text">Xác định tiêu đề của trang, sẽ được hiển thị trên thanh tiêu đề của trình duyệt.</span></p>
+            <p class="tag">&lt;<span class="tag">body</span>&gt;: <span class="black-text">Phần thân của tài liệu, nơi chứa nội dung chính mà người dùng sẽ nhìn thấy.</span></p>
+            <p class="tag">&lt;/<span class="tag">body</span>&gt; và &lt;/<span class="tag">html</span>&gt;: <span class="black-text">Thẻ đóng cho phần thân và tài liệu HTML, đánh dấu kết thúc của nội dung.</span></p>
+        </section>
+        
+        
+        
+        <div class="navigation">
+            <a href="html-editors.html" class="btn-previous">Previous</a>
+            <a href="index.html" class="btn-main">Home</a>
+            <a href="html-elements.html" class="btn-next">Next Page</a>
+        </div>
+    </div>
+    <footer></footer>
+
+    <script src="../assets/js/load-header-footer.js"></script>
+    <script src="../assets/js/togglecode.js"></script>
+</body>
+</html>

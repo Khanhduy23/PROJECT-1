@@ -28,6 +28,9 @@ body {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
 }
+.black-text {
+    color: black;
+}
 
 h1 {
     font-size: 26px;
@@ -124,7 +127,7 @@ h2 {
     margin-top: 20px; /* Thêm khoảng cách phía trên */
 }
 
-.btn-previous, .btn-next {
+.btn-previous, .btn-next, .btn-main {
     padding: 10px 15px;
     background-color: #007acc; /* Màu nền cho nút */
     color: white; /* Màu chữ cho nút */

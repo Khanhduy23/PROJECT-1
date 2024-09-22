@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributes</title>
+    <link rel="stylesheet" href="../assets/css/style-paperhtml.css">
+    <link rel="stylesheet" href="../assets/css/header-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/html-home.css">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header></header>
+    <div class="paper">
+        <div class="code-container">
+            <h1>HTML Attributes</h1>
+            <p>Thuộc tính HTML được sử dụng để cung cấp thêm thông tin về phần tử HTML. Chúng có thể ảnh hưởng đến cách mà phần tử đó hiển thị và tương tác với người dùng.</p>
+            <div class="code-example collapsed" id="codeExampleAttributes">
+                <pre><code class="language-html">&lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"https://example.com"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;Liên kết mới&lt;/<span class="tag">a</span>&gt;
+&lt;<span class="tag">img</span> <span class="attribute">src</span>=<span class="value">"image.jpg"</span> <span class="attribute">alt</span>=<span class="value">"Mô tả hình ảnh"</span> <span class="attribute">width</span>=<span class="value">"300"</span>&gt;
+&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">placeholder</span>=<span class="value">"Nhập tên của bạn"</span>&gt;</code></pre>
+            </div>
+            <button class="toggle-code" onclick="toggleCode('codeExampleAttributes')">Expand</button>
+            <button class="edit-code" onclick="editCode('attributesExample')">Code</button>
+        </div>
+        
+        <section>
+            <h2>Phân Tích Các Thuộc Tính</h2>
+            <p class="tag">&lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"https://example.com"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;: <span class="black-text">Thuộc tính <code class="attribute">href</code> xác định URL mà liên kết sẽ dẫn đến. Thuộc tính <code class="attribute">target</code> với giá trị <code class="value">"_blank"</code> mở liên kết trong tab mới.</span></p>
+            <p class="tag">&lt;<span class="tag">img</span> <span class="attribute">src</span>=<span class="value">"image.jpg"</span> <span class="attribute">alt</span>=<span class="value">"Mô tả hình ảnh"</span> <span class="attribute">width</span>=<span class="value">"300"</span>&gt;: <span class="black-text">Thuộc tính <code class="attribute">src</code> chỉ định nguồn hình ảnh, <code class="attribute">alt</code> cung cấp mô tả thay thế cho hình ảnh, và <code class="attribute">width</code> điều chỉnh chiều rộng hiển thị của hình ảnh.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">placeholder</span>=<span class="value">"Nhập tên của bạn"</span>&gt;: <span class="black-text">Thuộc tính <code class="attribute">type</code> xác định loại input (ở đây là văn bản), và <code class="attribute">placeholder</code> cung cấp hướng dẫn cho người dùng về thông tin cần nhập.</span></p>
+            <p class="tag">Một số thuộc tính phổ biến khác bao gồm:</p>
+            <ul>
+                <li><strong>class</strong>: Chỉ định một hoặc nhiều lớp CSS cho phần tử.</li>
+                <li><strong>id</strong>: Xác định một định danh duy nhất cho phần tử, thường dùng cho JavaScript và CSS.</li>
+                <li><strong>style</strong>: Áp dụng các kiểu CSS trực tiếp cho phần tử, nhưng không được khuyến khích sử dụng vì làm giảm khả năng bảo trì.</li>
+                <li><strong>disabled</strong>: Ngăn người dùng tương tác với phần tử, thường dùng cho các trường nhập liệu.</li>
+                <li><strong>value</strong>: Xác định giá trị của các phần tử nhập liệu như <code class="tag">input</code> và <code class="tag">textarea</code>.</li>
+            </ul>
+        </section>
+
+        <div class="navigation">
+            <a href="html-elements.html" class="btn-previous">Previous</a>
+            <a href="index.html" class="btn-main">Home</a>
+            <a href="html-events.html" class="btn-next">Next Page</a>
+        </div>
+    </div>
+    <footer></footer>
+
+    <script src="../assets/js/load-header-footer.js"></script>
+    <script src="../assets/js/togglecode.js"></script>
+</body>
+</html>
