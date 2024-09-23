@@ -31,16 +31,49 @@
             <p class="tag">&lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"https://example.com"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;: <span class="black-text">Thuộc tính <code class="attribute">href</code> xác định URL mà liên kết sẽ dẫn đến. Thuộc tính <code class="attribute">target</code> với giá trị <code class="value">"_blank"</code> mở liên kết trong tab mới.</span></p>
             <p class="tag">&lt;<span class="tag">img</span> <span class="attribute">src</span>=<span class="value">"image.jpg"</span> <span class="attribute">alt</span>=<span class="value">"Mô tả hình ảnh"</span> <span class="attribute">width</span>=<span class="value">"300"</span>&gt;: <span class="black-text">Thuộc tính <code class="attribute">src</code> chỉ định nguồn hình ảnh, <code class="attribute">alt</code> cung cấp mô tả thay thế cho hình ảnh, và <code class="attribute">width</code> điều chỉnh chiều rộng hiển thị của hình ảnh.</span></p>
             <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">placeholder</span>=<span class="value">"Nhập tên của bạn"</span>&gt;: <span class="black-text">Thuộc tính <code class="attribute">type</code> xác định loại input (ở đây là văn bản), và <code class="attribute">placeholder</code> cung cấp hướng dẫn cho người dùng về thông tin cần nhập.</span></p>
-            <p class="tag">Một số thuộc tính phổ biến khác bao gồm:</p>
-            <ul>
-                <li><strong>class</strong>: Chỉ định một hoặc nhiều lớp CSS cho phần tử.</li>
-                <li><strong>id</strong>: Xác định một định danh duy nhất cho phần tử, thường dùng cho JavaScript và CSS.</li>
-                <li><strong>style</strong>: Áp dụng các kiểu CSS trực tiếp cho phần tử, nhưng không được khuyến khích sử dụng vì làm giảm khả năng bảo trì.</li>
-                <li><strong>disabled</strong>: Ngăn người dùng tương tác với phần tử, thường dùng cho các trường nhập liệu.</li>
-                <li><strong>value</strong>: Xác định giá trị của các phần tử nhập liệu như <code class="tag">input</code> và <code class="tag">textarea</code>.</li>
-            </ul>
         </section>
-
+        <section>
+            <h2>Các Thuộc Tính HTML</h2>
+        
+            <h3>1. Phần cơ bản</h3>
+            <p class="tag">&lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"https://example.com"</span>&gt;: <span class="black-text">Cho phép người dùng nhấp để chuyển đến một trang web khác. Thuộc tính <code class="attribute">href</code> chỉ định URL của trang đích.</span></p>
+            <p class="tag">&lt;<span class="tag">img</span> <span class="attribute">src</span>=<span class="value">"image.jpg"</span>&gt;: <span class="black-text">Đường dẫn đến tệp hình ảnh mà bạn muốn hiển thị.</span></p>
+            <p class="tag">&lt;<span class="tag">img</span> <span class="attribute">alt</span>=<span class="value">"Mô tả hình ảnh"</span>&gt;: <span class="black-text">Mô tả thay thế cho hình ảnh, hiển thị khi hình ảnh không thể tải.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">type</span>=<span class="value">"text"</span>&gt;: <span class="black-text">Xác định loại của trường nhập liệu, trong trường hợp này là văn bản.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">placeholder</span>=<span class="value">"Nhập tên của bạn"</span>&gt;: <span class="black-text">Hướng dẫn cho người dùng về thông tin cần nhập vào trường.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="value">"example"</span>&gt;: <span class="black-text">Chỉ định một hoặc nhiều lớp CSS cho phần tử, có thể sử dụng để áp dụng kiểu dáng.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">id</span>=<span class="value">"uniqueId"</span>&gt;: <span class="black-text">Xác định một định danh duy nhất cho phần tử, thường dùng để truy cập trong JavaScript hoặc CSS.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">style</span>=<span class="value">"color: red;"</span>&gt;: <span class="black-text">Áp dụng các kiểu CSS trực tiếp cho phần tử, ví dụ như thay đổi màu sắc.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">value</span>=<span class="value">"Giá trị mặc định"</span>&gt;: <span class="black-text">Giá trị mặc định cho các phần tử nhập liệu như <code class="tag">&lt;input&gt;</code> và <code class="tag">&lt;textarea&gt;</code>.</span></p>
+        
+            <h3>2. Phần khá</h3>
+            <p class="tag">&lt;<span class="tag">a</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;: <span class="black-text">Xác định cách mở liên kết, trong trường hợp này là mở trong tab mới.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">disabled</span>&gt;: <span class="black-text">Ngăn người dùng tương tác với phần tử, không thể chọn hay nhập dữ liệu.</span></p>
+            <p class="tag">&lt;<span class="tag">form</span> <span class="attribute">action</span>=<span class="value">"submit.php"</span>&gt;: <span class="black-text">URL mà dữ liệu biểu mẫu sẽ được gửi đến khi người dùng gửi biểu mẫu.</span></p>
+            <p class="tag">&lt;<span class="tag">form</span> <span class="attribute">method</span>=<span class="value">"POST"</span>&gt;: <span class="black-text">Phương thức gửi dữ liệu, có thể là GET hoặc POST.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">autocomplete</span>=<span class="value">"off"</span>&gt;: <span class="black-text">Cho phép hoặc ngăn chặn tính năng tự động hoàn thành trong trường nhập liệu.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">maxlength</span>=<span class="value">"10"</span>&gt;: <span class="black-text">Xác định chiều dài tối đa cho trường nhập liệu.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">required</span>&gt;: <span class="black-text">Xác định rằng trường nhập liệu là bắt buộc và người dùng phải nhập dữ liệu.</span></p>
+            <p class="tag">&lt;<span class="tag">textarea</span> <span class="attribute">rows</span>=<span class="value">"4"</span> <span class="attribute">cols</span>=<span class="value">"50"</span>&gt;: <span class="black-text">Xác định số dòng và cột cho trường nhập liệu đa dòng.</span></p>
+            <p class="tag">&lt;<span class="tag">label</span> <span class="attribute">for</span>=<span class="value">"inputId"</span>&gt;: <span class="black-text">Kết nối nhãn với trường nhập liệu tương ứng, giúp người dùng biết trường nào mà nhãn đó mô tả.</span></p>
+        
+            <h3>3. Phần nâng cao</h3>
+            <p class="tag">&lt;<span class="tag">a</span> <span class="attribute">rel</span>=<span class="value">"noopener"</span>&gt;: <span class="black-text">Chỉ định mối quan hệ giữa tài liệu hiện tại và tài liệu liên kết, giúp tăng cường bảo mật.</span></p>
+            <p class="tag">&lt;<span class="tag">a</span> <span class="attribute">download</span>&gt;: <span class="black-text">Cho phép người dùng tải về tệp liên kết.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">min</span>=<span class="value">"1"</span> <span class="attribute">max</span>=<span class="value">"10"</span>&gt;: <span class="black-text">Xác định giá trị tối thiểu và tối đa cho trường nhập liệu.</span></p>
+            <p class="tag">&lt;<span class="tag">input</span> <span class="attribute">pattern</span>=<span class="value">"[A-Za-z]+"</span>&gt;: <span class="black-text">Xác định một mẫu cho giá trị của trường nhập liệu, giúp kiểm tra tính hợp lệ của dữ liệu.</span></p>
+            <p class="tag">&lt;<span class="tag">table</span> <span class="attribute">cellpadding</span>=<span class="value">"5"</span>&gt;: <span class="black-text">Điều chỉnh khoảng cách giữa các ô trong bảng.</span></p>
+            <p class="tag">&lt;<span class="tag">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span>&gt;: <span class="black-text">Điều chỉnh khoảng cách giữa các ô trong bảng.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">hidden</span>&gt;: <span class="black-text">Ẩn phần tử khỏi người dùng, không hiển thị trên giao diện.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">contenteditable</span>&gt;: <span class="black-text">Cho phép người dùng chỉnh sửa nội dung của phần tử.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">tabindex</span>=<span class="value">"1"</span>&gt;: <span class="black-text">Xác định thứ tự tab cho phần tử khi người dùng sử dụng bàn phím.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">aria-label</span>=<span class="value">"Nhãn cho phần tử"</span>&gt;: <span class="black-text">Các thuộc tính hỗ trợ truy cập cho người khuyết tật.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">itemscope</span>&gt;: <span class="black-text">Được sử dụng để định nghĩa dữ liệu vi mô cho SEO.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">itemtype</span>=<span class="value">"http://schema.org/Person"</span>&gt;: <span class="black-text">Được sử dụng để định nghĩa dữ liệu vi mô cho SEO.</span></p>
+            <p class="tag">&lt;<span class="tag">div</span> <span class="attribute">itemprop</span>=<span class="value">"name"</span>&gt;: <span class="black-text">Được sử dụng để định nghĩa dữ liệu vi mô cho SEO.</span></p>
+            <h3>Danh sách trên vẫn chưa phải là tất cả các thuộc tính HTML có thể sử dụng, nhưng nó đã mở rộng đáng kể với nhiều thuộc tính phổ biến và hữu ích hơn</h3>
+        </section>
+        
         <div class="navigation">
             <a href="html-elements.html" class="btn-previous">Previous</a>
             <a href="index.html" class="btn-main">Home</a>

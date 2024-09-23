@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Elements</title>
+    <title>Các Phần Tử HTML</title>
     <link rel="stylesheet" href="../assets/css/style-paperhtml.css">
     <link rel="stylesheet" href="../assets/css/code-container.css">
     <link rel="stylesheet" href="../assets/css/header-footer.css">
@@ -15,9 +15,10 @@
     <header></header>
     <div class="paper">
         <div class="code-container">
-            <h1>HTML Elements</h1>
-            <p>Đoạn mã dưới đây trình bày một số phần tử HTML cơ bản, mỗi phần tử có chức năng và ý nghĩa riêng trong cấu trúc tài liệu HTML.</p>
-            <p>Một phần tử HTML được xác định bởi một thẻ bắt đầu, một số nội dung và một thẻ kết thúc.</p>
+            <h1>Các Phần Tử HTML</h1>
+            <p>Trong đoạn mã dưới đây, bạn sẽ thấy một số phần tử HTML cơ bản, mỗi phần tử có chức năng và ý nghĩa riêng trong cấu trúc tài liệu HTML.</p>
+            <p>Một phần tử HTML được xác định bởi một thẻ mở, nội dung và một thẻ đóng.</p>
+            <p>Hãy đọc kỹ và sao chép hoặc nhập đoạn mã sau vào phần <code>&lt;body&gt; &lt;/body&gt;</code> trong không gian mã để thấy kết quả nhé!</p>
             <div class="code-example collapsed" id="codeExampleElements">
                 <pre><code class="language-html">&lt;<span class="tag">p</span>&gt;Đây là một đoạn văn.&lt;/<span class="tag">p</span>&gt;
 &lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"https://example.com"</span>&gt;Liên kết đến Example&lt;/<span class="tag">a</span>&gt;
@@ -45,13 +46,117 @@
         
         <section>
             <h2>Phân Tích Các Phần Tử</h2>
-            <p class="tag">&lt;<span class="tag">p</span>&gt;: <span class="black-text">Thẻ này được sử dụng để tạo một đoạn văn, giúp cấu trúc nội dung văn bản trong tài liệu HTML.</span></p>
-            <p class="tag">&lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"https://example.com"</span>&gt;: <span class="black-text">Thẻ liên kết này cho phép người dùng nhấp vào để chuyển đến một trang web khác. Thuộc tính <code class="attribute">href</code> chỉ định URL của trang đích.</span></p>
-            <p class="tag">&lt;<span class="tag">img</span> <span class="attribute">src</span>=<span class="value">"image.jpg"</span> <span class="attribute">alt</span>=<span class="value">"Mô tả hình ảnh"</span>&gt;: <span class="black-text">Thẻ hình ảnh này được sử dụng để chèn một hình ảnh vào trang. Thuộc tính <code class="attribute">src</code> chỉ định nguồn hình ảnh, và <code class="attribute">alt</code> cung cấp mô tả cho hình ảnh, rất hữu ích cho SEO và truy cập.</span></p>
-            <p class="tag">&lt;<span class="tag">h1</span>&gt;: <span class="black-text">Thẻ tiêu đề cấp 1, thường được sử dụng cho tiêu đề chính của trang. Có thể sử dụng đến 6 cấp tiêu đề từ <code class="tag">h1</code> đến <code class="tag">h6</code>.</span></p>
-            <p class="tag">&lt;<span class="tag">h2</span>&gt;: <span class="black-text">Thẻ tiêu đề cấp 2, thường được sử dụng cho tiêu đề phụ. Giúp phân cấp nội dung trong trang.</span></p>
-            <p class="tag">&lt;<span class="tag">ul</span>&gt;: <span class="black-text">Thẻ danh sách không thứ tự, dùng để tạo danh sách các mục mà không cần sắp xếp thứ tự. Mỗi mục trong danh sách được đặt trong thẻ <code class="tag">li</code>.</span></p>
-            <p class="tag">&lt;<span class="tag">table</span>&gt;: <span class="black-text">Thẻ bảng, dùng để hiển thị dữ liệu theo dạng bảng. Bảng bao gồm các hàng (<code class="tag">tr</code>), cột tiêu đề (<code class="tag">th</code>), và ô dữ liệu (<code class="tag">td</code>).</span></p>
+            <p class="tag">&lt;<span class="tag">p</span>&gt;: <span class="black-text">Được sử dụng để tạo một đoạn văn, giúp tổ chức nội dung văn bản trong tài liệu HTML.</span></p>
+            <p class="tag">&lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"https://example.com"</span>&gt;: <span class="black-text">Cho phép người dùng nhấp để chuyển đến một trang web khác. Thuộc tính <code class="attribute">href</code> chỉ định URL của trang đích.</span></p>
+            <p class="tag">&lt;<span class="tag">img</span> <span class="attribute">src</span>=<span class="value">"image.jpg"</span> <span class="attribute">alt</span>=<span class="value">"Mô tả hình ảnh"</span>&gt;: <span class="black-text">Chèn một hình ảnh vào trang. Thuộc tính <code class="attribute">src</code> xác định nguồn hình ảnh, trong khi <code class="attribute">alt</code> cung cấp mô tả hữu ích cho SEO và truy cập.</span></p>
+            <p class="tag">&lt;<span class="tag">h1</span>&gt;: <span class="black-text">Tiêu đề cấp 1, thường được dùng cho tiêu đề chính của trang. Có thể sử dụng từ <code class="tag">h1</code> đến <code class="tag">h6</code> cho các cấp tiêu đề khác nhau.</span></p>
+            <p class="tag">&lt;<span class="tag">h2</span>&gt;: <span class="black-text">Tiêu đề cấp 2, dùng cho tiêu đề phụ, giúp phân cấp nội dung trong trang.</span></p>
+            <p class="tag">&lt;<span class="tag">ul</span>&gt;: <span class="black-text">Danh sách không thứ tự, dùng để tạo danh sách mà không cần sắp xếp thứ tự. Mỗi mục được đặt trong thẻ <code class="tag">li</code>.</span></p>
+            <p class="tag">&lt;<span class="tag">table</span>&gt;: <span class="black-text">Thẻ bảng, dùng để hiển thị dữ liệu dưới dạng bảng. Bảng bao gồm các hàng (<code class="tag">tr</code>), tiêu đề cột (<code class="tag">th</code>), và ô dữ liệu (<code class="tag">td</code>).</span></p>
+            <p>Rất dễ phải không? Bây giờ, tôi sẽ liệt kê thêm một số thẻ HTML thông dụng và quan trọng. Hãy tham khảo thêm để biết nhiều hơn nhé!</p>
+        </section>
+        <section>
+            <h2>Các Thẻ HTML Thông Dụng Khác</h2>
+            <h3>1. Phần Cơ Bản</h3>
+            <p>Thường sử dụng và dễ tiếp cận cho người mới học.</p>
+            
+            <h4>Thẻ định dạng văn bản và tiêu đề:</h4>
+            <ul>
+                <li><span class="tag">&lt;h1&gt; - &lt;h6&gt;</span>: Tiêu đề các cấp.</li>
+                <li><span class="tag">&lt;p&gt;</span>: Đoạn văn bản.</li>
+                <li><span class="tag">&lt;a&gt;</span>: Đường dẫn liên kết.</li>
+                <li><span class="tag">&lt;br&gt;</span>: Xuống dòng.</li>
+                <li><span class="tag">&lt;strong&gt;</span>, <span class="tag">&lt;em&gt;</span>: Định dạng văn bản mạnh và nhấn mạnh.</li>
+            </ul>
+        
+            <h4>Thẻ tổ chức cấu trúc trang:</h4>
+            <ul>
+                <li><span class="tag">&lt;div&gt;</span>: Chia khối.</li>
+                <li><span class="tag">&lt;span&gt;</span>: Chia vùng nhỏ trong văn bản.</li>
+                <li><span class="tag">&lt;header&gt;</span>, <span class="tag">&lt;footer&gt;</span>: Phần đầu và chân của tài liệu.</li>
+                <li><span class="tag">&lt;section&gt;</span>, <span class="tag">&lt;article&gt;</span>, <span class="tag">&lt;aside&gt;</span>: Các phần nội dung cụ thể.</li>
+            </ul>
+        
+            <h4>Thẻ điều khiển form:</h4>
+            <ul>
+                <li><span class="tag">&lt;form&gt;</span>: Tạo biểu mẫu nhập liệu.</li>
+                <li><span class="tag">&lt;input&gt;</span>: Các trường nhập liệu (text, radio, checkbox...).</li>
+                <li><span class="tag">&lt;button&gt;</span>: Nút bấm.</li>
+                <li><span class="tag">&lt;select&gt;</span>: Tạo danh sách chọn.</li>
+            </ul>
+        
+            <h4>Thẻ hiển thị danh sách:</h4>
+            <ul>
+                <li><span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;li&gt;</span>: Tạo danh sách không thứ tự và có thứ tự.</li>
+                <li><span class="tag">&lt;dl&gt;</span>, <span class="tag">&lt;dt&gt;</span>, <span class="tag">&lt;dd&gt;</span>: Danh sách định nghĩa.</li>
+            </ul>
+        
+            <h3>2. Phần Khá</h3>
+            <p>Phổ biến nhưng đòi hỏi hiểu biết nhiều hơn về cấu trúc trang và dữ liệu.</p>
+        
+            <h4>Thẻ điều khiển hành vi tài liệu:</h4>
+            <ul>
+                <li><span class="tag">&lt;meta&gt;</span>: Cung cấp thông tin tài liệu.</li>
+                <li><span class="tag">&lt;link&gt;</span>: Liên kết đến tài nguyên bên ngoài (CSS, favicon...).</li>
+                <li><span class="tag">&lt;style&gt;</span>: Chèn CSS nội tuyến.</li>
+                <li><span class="tag">&lt;script&gt;</span>: Chèn mã JavaScript.</li>
+            </ul>
+        
+            <h4>Thẻ dữ liệu tương tác và nhập liệu:</h4>
+            <ul>
+                <li><span class="tag">&lt;textarea&gt;</span>: Vùng nhập liệu nhiều dòng.</li>
+                <li><span class="tag">&lt;fieldset&gt;</span>, <span class="tag">&lt;legend&gt;</span>: Nhóm và ghi chú các phần tử form.</li>
+                <li><span class="tag">&lt;label&gt;</span>: Gắn nhãn cho trường nhập liệu.</li>
+                <li><span class="tag">&lt;datalist&gt;</span>: Cung cấp gợi ý cho trường nhập liệu.</li>
+            </ul>
+        
+            <h4>Thẻ phân nhóm nội dung:</h4>
+            <ul>
+                <li><span class="tag">&lt;figure&gt;</span>, <span class="tag">&lt;figcaption&gt;</span>: Tập hợp và chú thích nội dung media.</li>
+                <li><span class="tag">&lt;details&gt;</span>, <span class="tag">&lt;summary&gt;</span>: Ẩn/hiện thông tin chi tiết.</li>
+                <li><span class="tag">&lt;main&gt;</span>: Nội dung chính của tài liệu.</li>
+            </ul>
+        
+            <h4>Thẻ đa phương tiện nâng cao:</h4>
+            <ul>
+                <li><span class="tag">&lt;source&gt;</span>, <span class="tag">&lt;track&gt;</span>, <span class="tag">&lt;picture&gt;</span>: Quản lý và tối ưu hóa nội dung media (video, audio, hình ảnh).</li>
+            </ul>
+        
+            <h3>3. Phần Nâng Cao</h3>
+            <p>Các thẻ chuyên sâu, ít sử dụng hơn trong các dự án nhỏ.</p>
+        
+            <h4>Thẻ liên quan đến ngữ nghĩa (semantic elements):</h4>
+            <ul>
+                <li><span class="tag">&lt;time&gt;</span>: Biểu diễn thời gian, ngày giờ.</li>
+                <li><span class="tag">&lt;mark&gt;</span>: Highlight đoạn văn bản.</li>
+                <li><span class="tag">&lt;address&gt;</span>: Thông tin liên hệ.</li>
+                <li><span class="tag">&lt;abbr&gt;</span>: Viết tắt và cung cấp nghĩa đầy đủ.</li>
+                <li><span class="tag">&lt;cite&gt;</span>, <span class="tag">&lt;bdo&gt;</span>: Trích dẫn và điều khiển hướng văn bản.</li>
+            </ul>
+        
+            <h4>Thẻ điều khiển và nhúng nội dung bên ngoài:</h4>
+            <ul>
+                <li><span class="tag">&lt;embed&gt;</span>, <span class="tag">&lt;object&gt;</span>, <span class="tag">&lt;param&gt;</span>: Nhúng nội dung từ các nguồn bên ngoài.</li>
+                <li><span class="tag">&lt;map&gt;</span>, <span class="tag">&lt;area&gt;</span>: Định nghĩa bản đồ hình ảnh và các vùng tương tác.</li>
+            </ul>
+        
+            <h4>Thẻ điều khiển bảng biểu nâng cao:</h4>
+            <ul>
+                <li><span class="tag">&lt;caption&gt;</span>, <span class="tag">&lt;colgroup&gt;</span>, <span class="tag">&lt;col&gt;</span>: Tạo tiêu đề và nhóm cột cho bảng.</li>
+                <li><span class="tag">&lt;thead&gt;</span>, <span class="tag">&lt;tbody&gt;</span>, <span class="tag">&lt;tfoot&gt;</span>: Phân chia phần bảng.</li>
+            </ul>
+        
+            <h4>Thẻ về văn bản và ký tự đặc biệt:</h4>
+            <ul>
+                <li><span class="tag">&lt;small&gt;</span>, <span class="tag">&lt;sub&gt;</span>, <span class="tag">&lt;sup&gt;</span>: Định dạng văn bản nhỏ, chỉ số dưới/trên.</li>
+                <li><span class="tag">&lt;kbd&gt;</span>, <span class="tag">&lt;var&gt;</span>, <span class="tag">&lt;samp&gt;</span>: Biểu diễn các ký tự lệnh hoặc mã chương trình.</li>
+            </ul>
+        
+            <h4>Thẻ về các thuộc tính logic và hỗ trợ truy cập:</h4>
+            <ul>
+                <li>Các thuộc tính ARIA (aria-*): Hỗ trợ khả năng truy cập cho người khuyết tật.</li>
+            </ul>
+            <h3>Sau này tôi sẽ liệt kê các thành phần cụ thể hơn và chỉ bạn cách áp dụng các thẻ một cách hợp lý nhất</h3>
         </section>
 
         <div class="navigation">
