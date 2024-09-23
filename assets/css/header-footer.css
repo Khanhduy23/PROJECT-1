@@ -1,4 +1,4 @@
-/* Header styles */
+/* CSS cho Header */
 header {
     width: 100%;
     background-color: #333;
@@ -27,7 +27,7 @@ header {
 
 /* Navigation Menu */
 .nav-menu {
-    display: none;
+    display: none; /* Ẩn menu khi chưa active */
     flex-direction: column;
     background-color: #333;
     position: absolute;
@@ -40,8 +40,8 @@ header {
 }
 
 .nav-menu.active {
-    display: flex;
-    max-height: 300px; /* Adjust as needed */
+    display: flex; /* Hiển thị menu khi active */
+    max-height: 300px;
 }
 
 .nav-menu ul {
@@ -68,10 +68,8 @@ header {
 }
 
 .nav-menu a:hover {
-    width: 100%;
-    color: rgb(246, 232, 232);
     background-color: rgb(40, 37, 37);
-    
+    color: #f6e8e8;
 }
 
 /* Search input */
@@ -79,9 +77,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    width: calc(100% - 50px);
-    margin-right: 0;
-    transition: width 0.3s;
+    width: 250px;
 }
 
 .search-input input[type="text"] {
@@ -90,17 +86,15 @@ header {
     border: none;
     border-radius: 15px;
     padding: 0 30px 0 10px;
-    /* transition: width 0.3s; */
 }
 
 .search-input i {
     position: absolute;
-    right: 0;
+    right: 0px;
     cursor: pointer;
-    padding: 7px;
     background-color: rgb(230, 184, 0);
-    border-radius: 15px;
-    /* transition: background-color 0.3s; */
+    border-radius: 50%;
+    padding: 7px;
 }
 
 .search-input i:hover {
@@ -118,21 +112,47 @@ header {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    box-shadow: 1px 1px white;
 }
 
 .login-button:hover {
     background-color: #ddd;
 }
 
-/* General Footer Styles */
+/* Responsive Design */
+@media only screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        background-color: transparent;
+        top: 0;
+        max-height: none;
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+    }
+
+    .nav-menu li {
+        margin: 0 20px;
+    }
+
+    .search-input {
+        width: 300px;
+    }
+}
+
+/* CSS cho Footer */
 .footer {
     background-color: #222;
     color: #fff;
     padding: 60px 0;
     text-align: center;
     font-family: 'Arial', sans-serif;
-    margin-top: 20px;
 }
 
 .footer-container {
@@ -173,11 +193,6 @@ header {
     color: #f1c40f;
 }
 
-.footer-column p {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
 .footer-bottom {
     background-color: #111;
     padding: 20px 0;
@@ -206,43 +221,14 @@ header {
     color: #f1c40f;
 }
 
-/* Responsive Design */
-@media only screen and (min-width: 768px) {
-    .menu-toggle {
-        display: none;
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        background-color: transparent;
-        top: 0;
-        max-height: none; /* Remove max-height constraint */
-    }
-
-    .nav-menu ul {
-        flex-direction: row;
-    }
-
-    .nav-menu li {
-        margin: 0 20px;
-    }
-
-    .search-input {
-        width: auto;
-        margin-right: 200px;
-    }
-}
-
-/* Medium screens (992px and up) */
-@media only screen and (min-width: 992px) {
-    .container-header {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .nav-menu ul {
-        flex-wrap: wrap;
+    .footer-column {
+        margin: 20px 0;
     }
 }

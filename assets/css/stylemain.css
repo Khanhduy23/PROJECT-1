@@ -8,7 +8,7 @@
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
-    scroll-behavior: smooth; /* Cải thiện trải nghiệm khi cuộn trang */
+    scroll-behavior: smooth;
 }
 
 /* Section Styles */
@@ -17,15 +17,14 @@ html, body {
     padding: 50px 0;
 }
 
-/* Container for Cards */
+/* Container for Cards - Using Grid */
 .container-cards {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit columns with responsive sizing */
     gap: 30px;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Thêm padding để có khoảng cách tốt trên các thiết bị nhỏ */
+    padding: 0 15px; /* Padding for small screens */
 }
 
 /* Individual Card */
@@ -36,8 +35,6 @@ html, body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Đặt chiều rộng 100% và điều chỉnh với màn hình nhỏ */
-    max-width: 300px;
     overflow: hidden;
 }
 
@@ -50,7 +47,7 @@ html, body {
 .card-icon {
     font-size: 50px;
     margin-bottom: 15px;
-    color: #f76c6c; /* màu biểu tượng */
+    color: #f76c6c; /* Icon color */
 }
 
 /* Card Heading */
@@ -86,11 +83,7 @@ html, body {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .container-cards {
-        flex-direction: column; /* Chuyển đổi layout sang chiều dọc khi màn hình nhỏ */
-        align-items: center;
-    }
-
-    .card {
-        width: 90%; /* Đảm bảo card chiếm đủ không gian trên màn hình nhỏ */
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+        padding: 0 20px;
     }
 }

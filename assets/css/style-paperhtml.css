@@ -19,17 +19,14 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
-    max-width: 1200px; /* Giới hạn kích thước tối đa */
-    height: auto; /* Để chiều cao tự động điều chỉnh */
-    overflow-y: auto; /* Cuộn dọc nếu cần */
+    max-width: 1200px;
+    height: auto;
+    overflow-y: auto;
     position: relative;
     font-size: 16px;
     line-height: 1.6;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-}
-.black-text {
-    color: black;
 }
 
 h1 {
@@ -39,123 +36,90 @@ h1 {
 }
 
 h2 {
-    margin-top: 20px; /* Thêm khoảng cách cho tiêu đề h2 */
+    margin-top: 20px;
     color: #005a9e;
 }
 
-/* Mục lục */
 .table-of-contents {
-    list-style-type: none; /* Bỏ dấu chấm đầu dòng */
-    padding: 0; /* Bỏ khoảng cách bên trong */
+    list-style-type: none;
+    padding: 0;
 }
 
 .table-of-contents li {
-    margin: 10px 0; /* Thêm khoảng cách giữa các mục */
+    margin: 10px 0;
 }
 
 .table-of-contents a {
-    text-decoration: none; /* Bỏ gạch chân */
-    color: #007acc; /* Màu chữ cho liên kết */
-    font-weight: bold; /* Đậm chữ */
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
 }
 
 .table-of-contents a:hover {
-    text-decoration: underline; /* Gạch chân khi hover */
-}
-
-.code-container {
-    margin-bottom: 20px; /* Thêm khoảng cách giữa các ví dụ */
-}
-
-/* CSS cho màu sắc code giống VS Code */
-.code-example {
-    background-color: #1e1e1e; /* Màu nền tối */
-    color: #636060; /* Màu chữ mặc định */
-    padding: 10px;
-    border-radius: 5px;
-    overflow: auto; /* Để không có thanh cuộn ngang */
-    font-family: 'Courier New', Courier, monospace; /* Font chữ monospace */
-}
-
-.keyword {
-    color: #3281c2; /* Màu xanh cho từ khóa */
-    font-weight: bold; /* Đậm hơn cho từ khóa */
-}
-
-.tag {
-    color: #0f5494; /* Màu cam cho thẻ */
-}
-
-.attribute {
-    color: #60a0dd; /* Màu tím cho thuộc tính */
-}
-
-.value {
-    color: #da792a; /* Màu xanh lá cho giá trị */
+    text-decoration: underline;
 }
 
 .image-container {
     display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc (nếu cần) */
-    flex-wrap: wrap; /* Cho phép hình ảnh xuống dòng nếu không đủ chỗ */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .image {
-    margin: 10px; /* Thêm khoảng cách giữa các hình ảnh */
-    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng container */
-    height: auto; /* Giữ tỷ lệ hình ảnh */
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 .toggle-code, .edit-code {
     margin-top: 10px;
     padding: 5px 10px;
-    background-color: #007acc; /* Màu nền cho nút */
-    color: white; /* Màu chữ cho nút */
+    background-color: #007acc;
+    color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
 }
 
 .toggle-code:hover, .edit-code:hover {
-    background-color: #005a9e; /* Màu nền khi hover */
+    background-color: #005a9e;
 }
 
 .navigation {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px; /* Thêm khoảng cách phía trên */
+    margin-top: 20px;
 }
 
 .btn-previous, .btn-next, .btn-main {
     padding: 10px 15px;
-    background-color: #007acc; /* Màu nền cho nút */
-    color: white; /* Màu chữ cho nút */
-    text-decoration: none; /* Bỏ gạch chân */
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+    transition: background-color 0.3s ease;
 }
 
-.btn-previous:hover, .btn-next:hover {
-    background-color: #005a9e; /* Màu nền khi hover */
+.btn-previous:hover, .btn-next:hover, .btn-main:hover {
+    background-color: #005a9e;
 }
 
-/* Responsive Styles */
 @media (max-width: 600px) {
     .paper {
-        width: 85%; /* Mở rộng chiều rộng cho màn hình nhỏ */
-        padding: 15px; /* Giảm padding */
+        width: 85%;
+        padding: 15px;
     }
 
     h1 {
-        font-size: 20px; /* Giảm kích thước tiêu đề */
+        font-size: 20px;
     }
 
     .btn-next {
-        padding: 8px 16px; /* Giảm padding cho nút */
+        padding: 8px 16px;
     }
 
     .code-example {
-        font-size: 14px; /* Giảm kích thước font trong code */
+        font-size: 14px;
     }
 }

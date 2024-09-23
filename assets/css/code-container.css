@@ -36,3 +36,21 @@
     max-height: 100px;
     overflow: hidden;
 }
+.keyword {
+    color: #3281c2; 
+    font-weight: bold; 
+}
+
+.tag {
+    color: #0f5494; 
+}
+
+.attribute {
+    color: #60a0dd;
+}
+.value {
+    color: #da792a; 
+}
+.black-text {
+    color: black;
+}

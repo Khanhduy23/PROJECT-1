@@ -14,14 +14,13 @@ html, body {
 /* Section Styles */
 .content-section {
     background-color: #f4f4f4;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 /* Container for Cards */
 .container-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
@@ -35,7 +34,6 @@ html, body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 160px;
     height: 160px;
     overflow: hidden;
     display: flex;
@@ -50,6 +48,7 @@ html, body {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 .card:hover p {
     font-weight: bold;
 }

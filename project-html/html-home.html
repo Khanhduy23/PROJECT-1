@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Examples</title>
     <link rel="stylesheet" href="../assets/css/style-paperhtml.css">
+    <link rel="stylesheet" href="../assets/css/code-container.css">  
     <link rel="stylesheet" href="../assets/css/header-footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/html-home.css">  
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header></header>
-    <div class="paper">
+    <main class="paper">
         <h1>HTML HOME</h1>
         <p>HTML (HyperText Markup Language) chính là nền tảng của mọi trang web. Tưởng tượng bạn đang xây dựng một ngôi nhà, HTML chính là bộ khung giúp bạn đặt ra vị trí của từng phòng, từng cửa sổ. Nó giúp trình duyệt hiểu cách hiển thị văn bản, <img src="#" alt="hình ảnh">, <a href="#">liên kết</a>, và các thành phần khác trên trang một cách chuẩn xác. Bạn sẽ dễ dàng tạo nên cấu trúc web bằng cách sử dụng HTML để mọi thứ hiển thị như ý muốn.&#9834;&#9834;</p>
-            
+        
+        <nav class="table-of-contents">
+            <h2>Mục Lục</h2>
+            <ul>
+                <li><a href="#example1">Example HTML Code 1</a></li>
+                <li><a href="#example2">Example HTML Code 2</a></li>
+            </ul>
+        </nav>
+
         <!-- Example 1 -->
-        <div class="code-container">
+        <section class="code-container" id="example1">
             <h2>Example HTML Code 1</h2>
-            <p>Với trình soạn thảo "Tự thử" của chúng tôi, bạn có thể chỉnh sửa mã HTML và xem kết quả ngay lập tức:</p>
-            <p>Khi bạn tự code xong nhấn <strong>save</strong> kết quả sẽ được lưu lại trong không gian code đó của bạn.</p>
+            <p>Khám phá sự sáng tạo của bạn với trình soạn thảo "Tự thử" độc đáo của chúng tôi! Tại đây, bạn có thể thoải mái chỉnh sửa mã HTML và xem ngay kết quả biến đổi trước mắt.</p>
+            <p>Khi bạn hoàn tất việc lập trình, chỉ cần nhấn <strong>save</strong> để lưu lại những sáng tạo của mình trong không gian code cá nhân. Bạn có thể tham khảo và tìm cảm hứng từ các đoạn mã mẫu bên dưới. Hãy nhấn <strong>Expand</strong> để mở rộng khung chứa mã và theo dõi phần xương của trang web. Nếu bạn muốn thu gọn lại, chỉ cần nhấn <strong>Collapse</strong>!</p>
+            <p>Đừng quên nhiệm vụ của bạn: nhấn vào <strong>Code</strong> và viết mã dựa trên những ví dụ có sẵn. Hãy tự tay trải nghiệm và hiểu rõ hơn về lập trình!</p>
+            <p><strong>Lưu ý:</strong> Sau khi hoàn thành, hãy nhớ lưu lại tác phẩm của bạn. Nếu không, tất cả sẽ trở về trạng thái ban đầu, chỉ còn lại mã mẫu mà thôi!</p>            
             <div class="code-example collapsed" id="codeExample1">
-<pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
+                <pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
 &lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;
 &lt;<span class="tag">head</span>&gt;
     &lt;<span class="tag">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;
@@ -37,11 +47,12 @@
             </div>
             <button class="toggle-code" onclick="toggleCode('codeExample1')">Expand</button>
             <button class="edit-code" onclick="editCode('example1')">Code</button>
-        </div>
+        </section>
+
         <!-- Example 2 -->
-        <div class="code-container">
-            <h2>Example HTML Code</h2>
-            <p>Đây là bố cục cơ bản của một trang web bao gồm các phần: header, nav, aside, article, và footer.</p>
+        <section class="code-container" id="example2">
+            <h2>Example HTML Code 2</h2>
+            <p>Đây là bố cục cơ bản của một trang web bao gồm các phần: header, nav, aside, article, và footer. Nếu dài quá bạn có thể copy và paste vào khung chứa code</p>
             <div class="code-example collapsed" id="codeExample2">
                 <pre><code class="language-html">&lt;<span class="keyword">!DOCTYPE</span> <span class="tag">html</span>&gt;
     &lt;<span class="tag">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;
@@ -98,69 +109,57 @@
                 <span class="attribute">background-color</span>: <span class="value">#ccc</span>;
             }
             <span class="keyword">footer</span> {
-                <span class="attribute">background-color</span>: <span class="value">#444</span>;
+                <span class="attribute">background-color</span>: <span class="value">#4CAF50</span>;
                 <span class="attribute">color</span>: <span class="value">white</span>;
                 <span class="attribute">text-align</span>: <span class="value">center</span>;
-            }
-            /* Responsive Design */
-            <span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="value">600px</span>) {
-                <span class="keyword">section</span> {
-                    <span class="attribute">flex-direction</span>: <span class="value">column</span>;
-                }
-                <span class="keyword">article</span>, <span class="keyword">aside</span> {
-                    <span class="attribute">width</span>: <span class="value">100%</span>;
-                }
-                <span class="keyword">nav ul li</span> {
-                    <span class="attribute">float</span>: <span class="value">none</span>;
-                    <span class="attribute">text-align</span>: <span class="value">center</span>;
-                }
             }
         &lt;/<span class="tag">style</span>&gt;
     &lt;/<span class="tag">head</span>&gt;
     &lt;<span class="tag">body</span>&gt;
         &lt;<span class="tag">header</span>&gt;
-            &lt;<span class="tag">h1</span>&gt;<span class="value">Header Section</span>&lt;/<span class="tag">h1</span>&gt;
+            &lt;<span class="tag">h1</span>&gt;<span class="value">Website Title</span>&lt;/<span class="tag">h1</span>&gt;
         &lt;/<span class="tag">header</span>&gt;
-    
         &lt;<span class="tag">nav</span>&gt;
             &lt;<span class="tag">ul</span>&gt;
-                &lt;<span class="tag">li</span>&gt;<span class="value">Home</span>&lt;/<span class="tag">li</span>&gt;
-                &lt;<span class="tag">li</span>&gt;<span class="value">About</span>&lt;/<span class="tag">li</span>&gt;
-                &lt;<span class="tag">li</span>&gt;<span class="value">Services</span>&lt;/<span class="tag">li</span>&gt;
-                &lt;<span class="tag">li</span>&gt;<span class="value">Contact</span>&lt;/<span class="tag">li</span>&gt;
+                &lt;<span class="tag">li</span>&gt;&lt;<span class="tag">a</span> href=<span class="value">"#"</span>&gt;<span class="value">Home</span>&lt;/<span class="tag">a</span>&gt;&lt;/<span class="tag">li</span>&gt;
+                &lt;<span class="tag">li</span>&gt;&lt;<span class="tag">a</span> href=<span class="value">"#"</span>&gt;<span class="value">About</span>&lt;/<span class="tag">a</span>&gt;&lt;/<span class="tag">li</span>&gt;
+                &lt;<span class="tag">li</span>&gt;&lt;<span class="tag">a</span> href=<span class="value">"#"</span>&gt;<span class="value">Contact</span>&lt;/<span class="tag">a</span>&gt;&lt;/<span class="tag">li</span>&gt;
             &lt;/<span class="tag">ul</span>&gt;
         &lt;/<span class="tag">nav</span>&gt;
-    
         &lt;<span class="tag">section</span>&gt;
             &lt;<span class="tag">article</span>&gt;
-                &lt;<span class="tag">h2</span>&gt;<span class="value">Article Section</span>&lt;/<span class="tag">h2</span>&gt;
-                &lt;<span class="tag">p</span>&gt;<span class="value">This is an article inside the section.</span>&lt;/<span class="tag">p</span>&gt;
+                &lt;<span class="tag">h2</span>&gt;<span class="value">Article Title</span>&lt;/<span class="tag">h2</span>&gt;
+                &lt;<span class="tag">p</span>&gt;<span class="value">This is the main content area.</span>&lt;/<span class="tag">p</span>&gt;
             &lt;/<span class="tag">article</span>&gt;
-    
             &lt;<span class="tag">aside</span>&gt;
-                &lt;<span class="tag">h2</span>&gt;<span class="value">Aside Section</span>&lt;/<span class="tag">h2</span>&gt;
-                &lt;<span class="tag">p</span>&gt;<span class="value">This is an aside inside the section.</span>&lt;/<span class="tag">p</span>&gt;
+                &lt;<span class="tag">h2</span>&gt;<span class="value">Sidebar Title</span>&lt;/<span class="tag">h2</span>&gt;
+                &lt;<span class="tag">p</span>&gt;<span class="value">This is a sidebar area.</span>&lt;/<span class="tag">p</span>&gt;
             &lt;/<span class="tag">aside</span>&gt;
         &lt;/<span class="tag">section</span>&gt;
-    
         &lt;<span class="tag">footer</span>&gt;
-            &lt;<span class="tag">p</span>&gt;<span class="value">Footer Section</span>&lt;/<span class="tag">p</span>&gt;
+            &lt;<span class="tag">p</span>&gt;<span class="value">Footer content here.</span>&lt;/<span class="tag">p</span>&gt;
         &lt;/<span class="tag">footer</span>&gt;
     &lt;/<span class="tag">body</span>&gt;
-&lt;/<span class="tag">html</span>&gt;
-        </code></pre>
-    </div>
+&lt;/<span class="tag">html</span>&gt;</code></pre>
+            </div>
             <button class="toggle-code" onclick="toggleCode('codeExample2')">Expand</button>
             <button class="edit-code" onclick="editCode('example2')">Code</button>
-        </div>
+        </section>
+        <h2>Giới thiệu về không gian code</h2>
+        <p>Trong không gian code, bạn sẽ được trải nghiệm ba phần chính:</p>
+        <ol>
+            <li>Phần HTML: Nơi bạn sẽ thỏa sức sáng tạo và lập trình mã HTML để xây dựng cấu trúc cho trang web của mình.</li>
+            <li>Phần CSS: Tại đây, bạn có thể tùy chỉnh phong cách và giao diện của trang bằng cách sử dụng mã CSS, biến những ý tưởng của bạn thành hiện thực. (sẽ học ở chương sau)</li>
+            <li>Phần JavaScript: Đây là không gian để bạn thêm các tính năng tương tác, giúp trang web trở nên sống động và hấp dẫn hơn. (sẽ học ở chương sau)</li>
+        </ol>
+        <h4>Bây giờ hãy bắt đầu trãi nghiệm sâu hơn về khóa học HTML nào. dooo</h4>
         <div class="navigation">
             <a href="html-home.html" class="btn-previous">Previous</a>
             <a href="index.html" class="btn-main">Home</a>
             <a href="html-introduction.html" class="btn-next">Next Page</a>
         </div>
-    </div>
+    </main>
     <footer></footer>
-
     <script src="../assets/js/load-header-footer.js"></script>
     <script src="../assets/js/togglecode.js"></script>
 </body>
