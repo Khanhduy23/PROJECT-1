@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4f8;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            overflow: hidden;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            transition: border-color 0.3s, background-color 0.3s;
+            overflow-y: auto;
+            max-height: 300px;
+            width: 100%;
+        }
+        .completed {
+            border: 2px solid #28a745;
+            background-color: #e8f5e9;
+        }
+        .incomplete {
+            border: 2px solid #ffc107;
+            background-color: #fff3cd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bài Tập Viết Thẻ HTML</h1>
+        <p>Hãy viết một thẻ HTML cơ bản để hiển thị một đoạn văn với nội dung "Xin chào, thế giới!"</p>
+        <form id="exerciseForm">
+            <label for="answer">Thẻ HTML của bạn:</label>
+            <textarea id="answer" placeholder="Nhập mã HTML của bạn ở đây"></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+
+        <div class="output incomplete" id="resultContainer">
+            <h3>Kết Quả:</h3>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        // Kiểm tra trạng thái hoàn thành và mã đã viết khi tải trang
+        window.onload = function() {
+            const savedCode = localStorage.getItem('userCode');
+            const isCompleted = localStorage.getItem('exerciseCompleted') === 'true';
+
+            if (savedCode) {
+                document.getElementById('answer').value = savedCode;
+                document.getElementById('result').innerHTML = savedCode; // Hiển thị mã đã viết
+            }
+
+            if (isCompleted) {
+                document.getElementById('resultContainer').classList.remove('incomplete');
+                document.getElementById('resultContainer').classList.add('completed');
+            }
+        };
+
+        document.getElementById('exerciseForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userAnswer = document.getElementById('answer').value.trim();
+            const correctAnswer = '<p>Xin chào, thế giới!</p>';
+
+            // Hiển thị kết quả HTML
+            document.getElementById('result').innerHTML = userAnswer;
+
+            // Lưu mã đã viết vào localStorage
+            localStorage.setItem('userCode', userAnswer);
+
+            if (userAnswer === correctAnswer) {
+                // Cập nhật trạng thái hoàn thành
+                document.getElementById('resultContainer').classList.remove('incomplete');
+                document.getElementById('resultContainer').classList.add('completed');
+                localStorage.setItem('exerciseCompleted', 'true');
+            } else {
+                // Nếu không đúng, cập nhật trạng thái không hoàn thành
+                document.getElementById('resultContainer').classList.remove('completed');
+                document.getElementById('resultContainer').classList.add('incomplete');
+                localStorage.setItem('exerciseCompleted', 'false'); // Đặt trạng thái không hoàn thành
+            }
+        });
+    </script>
+</body>
+</html>

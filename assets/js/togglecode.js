@@ -11,6 +11,9 @@ function toggleCode(codeId) {
     }
 }
 
-function editCode(exampleId) {
-    window.location.href = `example/homeex.html?exampleId=${exampleId}`;
+// function editCode(exampleId) {
+//     window.location.href = `example/homeex.html?exampleId=${exampleId}`;
+// }
+function editCode(examplePage, exampleId) {
+    window.location.href = `example/homeex.html?examplePage=${examplePage}&exampleId=${exampleId}`;
 }
