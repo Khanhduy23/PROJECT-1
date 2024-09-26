@@ -3,11 +3,11 @@ function toggleCode(codeId) {
     if (codeExample.classList.contains('collapsed')) {
         codeExample.classList.remove('collapsed');
         codeExample.classList.add('expanded');
-        document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Collapse';
+        document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Đóng lại';
     } else {
         codeExample.classList.remove('expanded');
         codeExample.classList.add('collapsed');
-        document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Expand';
+        document.querySelector(`button[onclick="toggleCode('${codeId}')"]`).textContent = 'Mở rộng';
     }
 }
 
